@@ -1,132 +1,723 @@
-2020-01-10T14:03:10.3853540Z ##[debug]Evaluating condition for step: 'pytest'
-2020-01-10T14:03:10.3854004Z ##[debug]Evaluating: SucceededNode()
-2020-01-10T14:03:10.3854081Z ##[debug]Evaluating SucceededNode:
-2020-01-10T14:03:10.3854246Z ##[debug]=> True
-2020-01-10T14:03:10.3854376Z ##[debug]Result: True
-2020-01-10T14:03:10.3854523Z ##[section]Starting: pytest
-2020-01-10T14:03:10.3856558Z ==============================================================================
-2020-01-10T14:03:10.3856601Z Task         : Command line
-2020-01-10T14:03:10.3856627Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
-2020-01-10T14:03:10.3856685Z Version      : 2.151.2
-2020-01-10T14:03:10.3856712Z Author       : Microsoft Corporation
-2020-01-10T14:03:10.3856739Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
-2020-01-10T14:03:10.3856764Z ==============================================================================
-2020-01-10T14:03:10.4958392Z ##[debug]agent.TempDirectory=/home/vsts/work/_temp
-2020-01-10T14:03:10.4986249Z ##[debug]loading inputs and endpoints
-2020-01-10T14:03:10.4990001Z ##[debug]loading INPUT_SCRIPT
-2020-01-10T14:03:10.4999326Z ##[debug]loading INPUT_WORKINGDIRECTORY
-2020-01-10T14:03:10.5000242Z ##[debug]loading INPUT_FAILONSTDERR
-2020-01-10T14:03:10.5000401Z ##[debug]loading ENDPOINT_AUTH_SYSTEMVSSCONNECTION
-2020-01-10T14:03:10.5002437Z ##[debug]loading ENDPOINT_AUTH_SCHEME_SYSTEMVSSCONNECTION
-2020-01-10T14:03:10.5004576Z ##[debug]loading ENDPOINT_AUTH_PARAMETER_SYSTEMVSSCONNECTION_ACCESSTOKEN
-2020-01-10T14:03:10.5009636Z ##[debug]loading SECRET_SYSTEM_ACCESSTOKEN
-2020-01-10T14:03:10.5011154Z ##[debug]loaded 7
-2020-01-10T14:03:10.5023991Z ##[debug]Agent.ProxyUrl=undefined
-2020-01-10T14:03:10.5024146Z ##[debug]Agent.CAInfo=undefined
-2020-01-10T14:03:10.5024208Z ##[debug]Agent.ClientCert=undefined
-2020-01-10T14:03:10.5024298Z ##[debug]Agent.SkipCertValidation=undefined
-2020-01-10T14:03:10.5036633Z ##[debug]check path : /home/vsts/work/_tasks/CmdLine_d9bafed4-0b18-4f58-968d-86655b4d2ce9/2.151.2/task.json
-2020-01-10T14:03:10.5036922Z ##[debug]adding resource file: /home/vsts/work/_tasks/CmdLine_d9bafed4-0b18-4f58-968d-86655b4d2ce9/2.151.2/task.json
-2020-01-10T14:03:10.5037612Z ##[debug]system.culture=en-US
-2020-01-10T14:03:10.5053500Z ##[debug]failOnStderr=false
-2020-01-10T14:03:10.5056293Z ##[debug]script=pip install pytest pytest-azurepipelines
+2020-01-10T15:47:09.7685481Z ##[section]Starting: Job Python37
+2020-01-10T15:47:09.7758652Z ##[debug]Cleaning agent temp folder: /home/vsts/work/_temp
+2020-01-10T15:47:09.7801774Z ##[debug]Skipping overwrite %TEMP% environment variable
+2020-01-10T15:47:09.9988603Z ##[section]Starting: Initialize job
+2020-01-10T15:47:09.9988827Z Agent name: 'Hosted Agent'
+2020-01-10T15:47:09.9988945Z Agent machine name: 'fv-az655'
+2020-01-10T15:47:09.9989012Z Current agent version: '2.163.1'
+2020-01-10T15:47:09.9990244Z Current image version: '20191209.1'
+2020-01-10T15:47:10.0011154Z Agent running as: 'vsts'
+2020-01-10T15:47:10.0103703Z ##[debug]Primary repository: michaelhochleitner/python-sample-vscode-flask-tutorial. repository type: GitHub
+2020-01-10T15:47:10.0114273Z Prepare build directory.
+2020-01-10T15:47:10.0360267Z ##[debug]Creating build directory: '/home/vsts/work/1'
+2020-01-10T15:47:10.0361598Z ##[debug]Delete existing artifacts directory: '/home/vsts/work/1/a'
+2020-01-10T15:47:10.0366968Z ##[debug]Creating artifacts directory: '/home/vsts/work/1/a'
+2020-01-10T15:47:10.0368018Z ##[debug]Delete existing test results directory: '/home/vsts/work/1/TestResults'
+2020-01-10T15:47:10.0368339Z ##[debug]Creating test results directory: '/home/vsts/work/1/TestResults'
+2020-01-10T15:47:10.0369222Z ##[debug]Creating binaries directory: '/home/vsts/work/1/b'
+2020-01-10T15:47:10.0370205Z ##[debug]Creating source directory: '/home/vsts/work/1/s'
+2020-01-10T15:47:10.0379912Z Set build variables.
+2020-01-10T15:47:10.0427050Z Download all required tasks.
+2020-01-10T15:47:10.0632231Z Downloading task: UsePythonVersion (0.151.2)
+2020-01-10T15:47:10.2997278Z ##[debug]Task 'UsePythonVersion' has been downloaded into '/home/vsts/work/_tasks/UsePythonVersion_33c63b11-352b-45a2-ba1b-54cb568a29ca/0.151.2'.
+2020-01-10T15:47:10.3220879Z Downloading task: CmdLine (2.151.2)
+2020-01-10T15:47:10.4407541Z ##[debug]Task 'CmdLine' has been downloaded into '/home/vsts/work/_tasks/CmdLine_d9bafed4-0b18-4f58-968d-86655b4d2ce9/2.151.2'.
+2020-01-10T15:47:10.4801671Z ##[debug]Log plugin 'TestResultLogPlugin' is disabled.
+2020-01-10T15:47:10.4801849Z ##[debug]Log plugin 'TestFilePublisherPlugin' is disabled.
+2020-01-10T15:47:10.4802025Z Start tracking orphan processes.
+2020-01-10T15:47:10.4927084Z ##[section]Finishing: Initialize job
+2020-01-10T15:47:10.5094621Z ##[debug]Evaluating condition for step: 'Checkout'
+2020-01-10T15:47:10.5241690Z ##[debug]Evaluating: SucceededNode()
+2020-01-10T15:47:10.5264457Z ##[debug]Evaluating SucceededNode:
+2020-01-10T15:47:10.5375820Z ##[debug]=> True
+2020-01-10T15:47:10.5411314Z ##[debug]Result: True
+2020-01-10T15:47:10.5490197Z ##[section]Starting: Checkout
+2020-01-10T15:47:10.5799811Z ==============================================================================
+2020-01-10T15:47:10.5799950Z Task         : Get sources
+2020-01-10T15:47:10.5800025Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2020-01-10T15:47:10.5800205Z Version      : 1.0.0
+2020-01-10T15:47:10.5800266Z Author       : Microsoft
+2020-01-10T15:47:10.5800354Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2020-01-10T15:47:10.5800447Z ==============================================================================
+2020-01-10T15:47:11.4899720Z ##[debug]Processed: ##vso[plugininternal.updaterepositorypath alias=self;]/home/vsts/work/1/s
+2020-01-10T15:47:11.4945155Z ##[debug]Repository requires to be placed at '/home/vsts/work/1/s', current location is '/home/vsts/work/1/s'
+2020-01-10T15:47:11.4945739Z Syncing repository: michaelhochleitner/python-sample-vscode-flask-tutorial (GitHub)
+2020-01-10T15:47:11.4946659Z ##[debug]repository url=https://github.com/michaelhochleitner/python-sample-vscode-flask-tutorial
+2020-01-10T15:47:11.4946860Z ##[debug]targetPath=/home/vsts/work/1/s
+2020-01-10T15:47:11.4946962Z ##[debug]sourceBranch=refs/heads/master
+2020-01-10T15:47:11.4947113Z ##[debug]sourceVersion=580e07ba6a2abc189845f4083aaf9185b4773abf
+2020-01-10T15:47:11.4947257Z ##[debug]clean=True
+2020-01-10T15:47:11.4947353Z ##[debug]checkoutSubmodules=False
+2020-01-10T15:47:11.4947919Z ##[debug]checkoutNestedSubmodules=False
+2020-01-10T15:47:11.4948059Z ##[debug]exposeCred=False
+2020-01-10T15:47:11.4948152Z ##[debug]fetchDepth=0
+2020-01-10T15:47:11.4948301Z ##[debug]gitLfsSupport=False
+2020-01-10T15:47:11.4948447Z ##[debug]acceptUntrustedCerts=False
+2020-01-10T15:47:11.4948545Z ##[debug]schannelSslBackend=False
+2020-01-10T15:47:11.4948906Z ##[debug]Which: 'git'
+2020-01-10T15:47:11.4949182Z ##[debug]Location: '{matches.First()}'
+2020-01-10T15:47:11.4949291Z ##[debug]Get git version.
+2020-01-10T15:47:11.4949391Z ##[command]git version
+2020-01-10T15:47:11.4949484Z ##[debug]Starting process:
+2020-01-10T15:47:11.4949752Z ##[debug]  File name: '/usr/bin/git'
+2020-01-10T15:47:11.4950408Z ##[debug]  Arguments: 'version'
+2020-01-10T15:47:11.4950693Z ##[debug]  Working directory: '/home/vsts/work'
+2020-01-10T15:47:11.4950924Z ##[debug]  Require exit code zero: 'False'
+2020-01-10T15:47:11.4951397Z ##[debug]  Encoding web name:  ; code page: ''
+2020-01-10T15:47:11.4951719Z ##[debug]  Force kill process on cancellation: 'False'
+2020-01-10T15:47:11.4951946Z ##[debug]  Redirected STDIN: 'False'
+2020-01-10T15:47:11.4952207Z ##[debug]  Persist current code page: 'False'
+2020-01-10T15:47:11.4952685Z ##[debug]  Keep redirected STDIN open: 'False'
+2020-01-10T15:47:11.4952905Z ##[debug]  High priority process: 'False'
+2020-01-10T15:47:11.4953057Z ##[debug]Updated oom_score_adj to 500 for PID: 3042.
+2020-01-10T15:47:11.4953209Z ##[debug]Process started with process id 3042, waiting for process exit.
+2020-01-10T15:47:11.4953310Z ##[debug]STDOUT/STDERR stream read finished.
+2020-01-10T15:47:11.4953447Z ##[debug]STDOUT/STDERR stream read finished.
+2020-01-10T15:47:11.4953583Z ##[debug]Exited process 3042 with exit code 0
+2020-01-10T15:47:11.4953693Z ##[debug]Finished process 3042 with exit code 0, and elapsed time 00:00:00.0236968.
+2020-01-10T15:47:11.4953800Z git version 2.24.0
+2020-01-10T15:47:11.4953891Z ##[debug]Detect git version: 2.24.0.
+2020-01-10T15:47:11.5031965Z ##[debug]Which: 'git-lfs'
+2020-01-10T15:47:11.5032387Z ##[debug]Location: '{matches.First()}'
+2020-01-10T15:47:11.5032629Z ##[debug]Get git-lfs version.
+2020-01-10T15:47:11.5032718Z ##[command]git lfs version
+2020-01-10T15:47:11.5033205Z ##[debug]Starting process:
+2020-01-10T15:47:11.5033508Z ##[debug]  File name: '/usr/bin/git'
+2020-01-10T15:47:11.5033772Z ##[debug]  Arguments: 'lfs version'
+2020-01-10T15:47:11.5034013Z ##[debug]  Working directory: '/home/vsts/work'
+2020-01-10T15:47:11.5034402Z ##[debug]  Require exit code zero: 'False'
+2020-01-10T15:47:11.5034664Z ##[debug]  Encoding web name:  ; code page: ''
+2020-01-10T15:47:11.5034928Z ##[debug]  Force kill process on cancellation: 'False'
+2020-01-10T15:47:11.5035153Z ##[debug]  Redirected STDIN: 'False'
+2020-01-10T15:47:11.5035406Z ##[debug]  Persist current code page: 'False'
+2020-01-10T15:47:11.5035649Z ##[debug]  Keep redirected STDIN open: 'False'
+2020-01-10T15:47:11.5035869Z ##[debug]  High priority process: 'False'
+2020-01-10T15:47:11.5036012Z ##[debug]Updated oom_score_adj to 500 for PID: 3047.
+2020-01-10T15:47:11.5036388Z ##[debug]Process started with process id 3047, waiting for process exit.
+2020-01-10T15:47:11.5282922Z ##[debug]STDOUT/STDERR stream read finished.
+2020-01-10T15:47:11.5283089Z ##[debug]Exited process 3047 with exit code 0
+2020-01-10T15:47:11.5283235Z ##[debug]STDOUT/STDERR stream read finished.
+2020-01-10T15:47:11.5283380Z ##[debug]Finished process 3047 with exit code 0, and elapsed time 00:00:00.0865462.
+2020-01-10T15:47:11.5284104Z git-lfs/2.9.1 (GitHub; linux amd64; go 1.13.1)
+2020-01-10T15:47:11.5284403Z ##[debug]Detect git-lfs version: '2.9.1'.
+2020-01-10T15:47:11.5284646Z ##[debug]Set git useragent to: git/2.24.0 (vsts-agent-git/2.163.1).
+2020-01-10T15:47:11.5386109Z ##[debug]Checking if the repo on /home/vsts/work/1/s matches the expected repository origin URL. expected Url: https://github.com/michaelhochleitner/python-sample-vscode-flask-tutorial
+2020-01-10T15:47:11.5387026Z ##[debug]Repository is not found since '.git' directory does not exist under. /home/vsts/work/1/s
+2020-01-10T15:47:12.4771854Z ##[debug]Init git repository at: /home/vsts/work/1/s.
+2020-01-10T15:47:12.4772024Z ##[command]git init "/home/vsts/work/1/s"
+2020-01-10T15:47:12.4772196Z ##[debug]Starting process:
+2020-01-10T15:47:12.4772929Z ##[debug]  File name: '/usr/bin/git'
+2020-01-10T15:47:12.4773415Z ##[debug]  Arguments: 'init "/home/vsts/work/1/s"'
+2020-01-10T15:47:12.4773860Z ##[debug]  Working directory: '/home/vsts/work/1/s'
+2020-01-10T15:47:12.4774093Z ##[debug]  Require exit code zero: 'False'
+2020-01-10T15:47:12.4774343Z ##[debug]  Encoding web name:  ; code page: ''
+2020-01-10T15:47:12.4774606Z ##[debug]  Force kill process on cancellation: 'False'
+2020-01-10T15:47:12.4774838Z ##[debug]  Redirected STDIN: 'False'
+2020-01-10T15:47:12.4775080Z ##[debug]  Persist current code page: 'False'
+2020-01-10T15:47:12.4775319Z ##[debug]  Keep redirected STDIN open: 'False'
+2020-01-10T15:47:12.4775536Z ##[debug]  High priority process: 'False'
+2020-01-10T15:47:12.4775712Z ##[debug]Updated oom_score_adj to 500 for PID: 3056.
+2020-01-10T15:47:12.4775857Z ##[debug]Process started with process id 3056, waiting for process exit.
+2020-01-10T15:47:12.4775967Z ##[debug]STDOUT/STDERR stream read finished.
+2020-01-10T15:47:12.4776259Z ##[debug]STDOUT/STDERR stream read finished.
+2020-01-10T15:47:12.4776442Z Initialized empty Git repository in /home/vsts/work/1/s/.git/
+2020-01-10T15:47:12.4776754Z ##[debug]Exited process 3056 with exit code 0
+2020-01-10T15:47:12.4776885Z ##[debug]Finished process 3056 with exit code 0, and elapsed time 00:00:00.0090485.
+2020-01-10T15:47:12.4777218Z ##[debug]Add git remote: origin to url: https://github.com/michaelhochleitner/python-sample-vscode-flask-tutorial for repository under: /home/vsts/work/1/s.
+2020-01-10T15:47:12.4777613Z ##[command]git remote add origin https://github.com/michaelhochleitner/python-sample-vscode-flask-tutorial
+2020-01-10T15:47:12.4777773Z ##[debug]Starting process:
+2020-01-10T15:47:12.4778013Z ##[debug]  File name: '/usr/bin/git'
+2020-01-10T15:47:12.4778303Z ##[debug]  Arguments: 'remote add origin https://github.com/michaelhochleitner/python-sample-vscode-flask-tutorial'
+2020-01-10T15:47:12.4778550Z ##[debug]  Working directory: '/home/vsts/work/1/s'
+2020-01-10T15:47:12.4779021Z ##[debug]  Require exit code zero: 'False'
+2020-01-10T15:47:12.4779349Z ##[debug]  Encoding web name:  ; code page: ''
+2020-01-10T15:47:12.4779581Z ##[debug]  Force kill process on cancellation: 'False'
+2020-01-10T15:47:12.4779819Z ##[debug]  Redirected STDIN: 'False'
+2020-01-10T15:47:12.4780053Z ##[debug]  Persist current code page: 'False'
+2020-01-10T15:47:12.4780274Z ##[debug]  Keep redirected STDIN open: 'False'
+2020-01-10T15:47:12.4780515Z ##[debug]  High priority process: 'False'
+2020-01-10T15:47:12.4780644Z ##[debug]Updated oom_score_adj to 500 for PID: 3057.
+2020-01-10T15:47:12.4780756Z ##[debug]Process started with process id 3057, waiting for process exit.
+2020-01-10T15:47:12.4781039Z ##[debug]STDOUT/STDERR stream read finished.
+2020-01-10T15:47:12.4781163Z ##[debug]STDOUT/STDERR stream read finished.
+2020-01-10T15:47:12.4781259Z ##[debug]Exited process 3057 with exit code 0
+2020-01-10T15:47:12.4781392Z ##[debug]Finished process 3057 with exit code 0, and elapsed time 00:00:00.0060952.
+2020-01-10T15:47:12.4799761Z ##[debug]Processed: ##vso[task.setprogress value=0]Starting fetch...
+2020-01-10T15:47:12.4800176Z ##[debug]Disable git auto garbage collection.
+2020-01-10T15:47:12.4800239Z ##[command]git config gc.auto 0
+2020-01-10T15:47:12.4800371Z ##[debug]Starting process:
+2020-01-10T15:47:12.4800801Z ##[debug]  File name: '/usr/bin/git'
+2020-01-10T15:47:12.4801049Z ##[debug]  Arguments: 'config gc.auto 0'
+2020-01-10T15:47:12.4801321Z ##[debug]  Working directory: '/home/vsts/work/1/s'
+2020-01-10T15:47:12.4801549Z ##[debug]  Require exit code zero: 'False'
+2020-01-10T15:47:12.4801762Z ##[debug]  Encoding web name:  ; code page: ''
+2020-01-10T15:47:12.4801989Z ##[debug]  Force kill process on cancellation: 'False'
+2020-01-10T15:47:12.4802505Z ##[debug]  Redirected STDIN: 'False'
+2020-01-10T15:47:12.4802724Z ##[debug]  Persist current code page: 'False'
+2020-01-10T15:47:12.4802950Z ##[debug]  Keep redirected STDIN open: 'False'
+2020-01-10T15:47:12.4803186Z ##[debug]  High priority process: 'False'
+2020-01-10T15:47:12.4803294Z ##[debug]Updated oom_score_adj to 500 for PID: 3058.
+2020-01-10T15:47:12.4803415Z ##[debug]Process started with process id 3058, waiting for process exit.
+2020-01-10T15:47:12.4803530Z ##[debug]STDOUT/STDERR stream read finished.
+2020-01-10T15:47:12.4803622Z ##[debug]STDOUT/STDERR stream read finished.
+2020-01-10T15:47:12.4803733Z ##[debug]Exited process 3058 with exit code 0
+2020-01-10T15:47:12.4803853Z ##[debug]Finished process 3058 with exit code 0, and elapsed time 00:00:00.0033457.
+2020-01-10T15:47:12.4804134Z ##[debug]Checking git config http.https://github.com/michaelhochleitner/python-sample-vscode-flask-tutorial.extraheader exist or not
+2020-01-10T15:47:12.4804488Z ##[command]git config --get-all http.https://github.com/michaelhochleitner/python-sample-vscode-flask-tutorial.extraheader
+2020-01-10T15:47:12.4804661Z ##[debug]Starting process:
+2020-01-10T15:47:12.4804864Z ##[debug]  File name: '/usr/bin/git'
+2020-01-10T15:47:12.4805148Z ##[debug]  Arguments: 'config --get-all http.https://github.com/michaelhochleitner/python-sample-vscode-flask-tutorial.extraheader'
+2020-01-10T15:47:12.4805420Z ##[debug]  Working directory: '/home/vsts/work/1/s'
+2020-01-10T15:47:12.4805627Z ##[debug]  Require exit code zero: 'False'
+2020-01-10T15:47:12.4805886Z ##[debug]  Encoding web name:  ; code page: ''
+2020-01-10T15:47:12.4806138Z ##[debug]  Force kill process on cancellation: 'False'
+2020-01-10T15:47:12.4806969Z ##[debug]  Redirected STDIN: 'False'
+2020-01-10T15:47:12.4807301Z ##[debug]  Persist current code page: 'False'
+2020-01-10T15:47:12.4807568Z ##[debug]  Keep redirected STDIN open: 'False'
+2020-01-10T15:47:12.4807836Z ##[debug]  High priority process: 'False'
+2020-01-10T15:47:12.4807953Z ##[debug]Updated oom_score_adj to 500 for PID: 3059.
+2020-01-10T15:47:12.4808120Z ##[debug]Process started with process id 3059, waiting for process exit.
+2020-01-10T15:47:12.4808265Z ##[debug]STDOUT/STDERR stream read finished.
+2020-01-10T15:47:12.4808491Z ##[debug]STDOUT/STDERR stream read finished.
+2020-01-10T15:47:12.4808666Z ##[debug]Exited process 3059 with exit code 1
+2020-01-10T15:47:12.4808819Z ##[debug]Finished process 3059 with exit code 1, and elapsed time 00:00:00.0050036.
+2020-01-10T15:47:12.4808930Z ##[debug]Checking git config http.proxy exist or not
+2020-01-10T15:47:12.4809285Z ##[command]git config --get-all http.proxy
+2020-01-10T15:47:12.4809401Z ##[debug]Starting process:
+2020-01-10T15:47:12.4809667Z ##[debug]  File name: '/usr/bin/git'
+2020-01-10T15:47:12.4809933Z ##[debug]  Arguments: 'config --get-all http.proxy'
+2020-01-10T15:47:12.4810158Z ##[debug]  Working directory: '/home/vsts/work/1/s'
+2020-01-10T15:47:12.4810612Z ##[debug]  Require exit code zero: 'False'
+2020-01-10T15:47:12.4811025Z ##[debug]  Encoding web name:  ; code page: ''
+2020-01-10T15:47:12.4811257Z ##[debug]  Force kill process on cancellation: 'False'
+2020-01-10T15:47:12.4811513Z ##[debug]  Redirected STDIN: 'False'
+2020-01-10T15:47:12.4812285Z ##[debug]  Persist current code page: 'False'
+2020-01-10T15:47:12.4812584Z ##[debug]  Keep redirected STDIN open: 'False'
+2020-01-10T15:47:12.4812848Z ##[debug]  High priority process: 'False'
+2020-01-10T15:47:12.4812986Z ##[debug]Updated oom_score_adj to 500 for PID: 3060.
+2020-01-10T15:47:12.4813092Z ##[debug]Process started with process id 3060, waiting for process exit.
+2020-01-10T15:47:12.4813207Z ##[debug]STDOUT/STDERR stream read finished.
+2020-01-10T15:47:12.4813318Z ##[debug]STDOUT/STDERR stream read finished.
+2020-01-10T15:47:12.4813411Z ##[debug]Exited process 3060 with exit code 1
+2020-01-10T15:47:12.4813548Z ##[debug]Finished process 3060 with exit code 1, and elapsed time 00:00:00.0032836.
+2020-01-10T15:47:12.4814204Z ##[debug]Processed: ##vso[task.setsecret]***
+2020-01-10T15:47:12.4814362Z ##[debug]Fetch git repository at: /home/vsts/work/1/s remote: origin.
+2020-01-10T15:47:12.4815248Z ##[command]git -c http.extraheader="AUTHORIZATION: basic ***" fetch --force --tags --prune --progress --no-recurse-submodules origin
+2020-01-10T15:47:12.4815423Z ##[debug]Starting process:
+2020-01-10T15:47:12.4815650Z ##[debug]  File name: '/usr/bin/git'
+2020-01-10T15:47:12.4815952Z ##[debug]  Arguments: '-c http.extraheader="AUTHORIZATION: basic ***" fetch --force --tags --prune --progress --no-recurse-submodules origin'
+2020-01-10T15:47:12.4816255Z ##[debug]  Working directory: '/home/vsts/work/1/s'
+2020-01-10T15:47:12.4817072Z ##[debug]  Require exit code zero: 'False'
+2020-01-10T15:47:12.4817351Z ##[debug]  Encoding web name:  ; code page: ''
+2020-01-10T15:47:12.4817587Z ##[debug]  Force kill process on cancellation: 'False'
+2020-01-10T15:47:12.4817856Z ##[debug]  Redirected STDIN: 'False'
+2020-01-10T15:47:12.4818095Z ##[debug]  Persist current code page: 'False'
+2020-01-10T15:47:12.4818317Z ##[debug]  Keep redirected STDIN open: 'False'
+2020-01-10T15:47:12.4818598Z ##[debug]  High priority process: 'False'
+2020-01-10T15:47:12.4818753Z ##[debug]Updated oom_score_adj to 500 for PID: 3061.
+2020-01-10T15:47:12.4818897Z ##[debug]Process started with process id 3061, waiting for process exit.
+2020-01-10T15:47:12.4818972Z remote: Enumerating objects: 1, done.        
+2020-01-10T15:47:12.4819063Z remote: Counting objects: 100% (1/1)        
+2020-01-10T15:47:12.4819129Z remote: Counting objects: 100% (1/1), done.        
+2020-01-10T15:47:12.5080447Z Receiving objects:   0% (1/200)
+2020-01-10T15:47:12.5080741Z Receiving objects:   1% (2/200)
+2020-01-10T15:47:12.5080883Z Receiving objects:   2% (4/200)
+2020-01-10T15:47:12.5080971Z Receiving objects:   3% (6/200)
+2020-01-10T15:47:12.5081069Z Receiving objects:   4% (8/200)
+2020-01-10T15:47:12.5081330Z Receiving objects:   5% (10/200)
+2020-01-10T15:47:12.5081431Z Receiving objects:   6% (12/200)
+2020-01-10T15:47:12.5514579Z Receiving objects:   7% (14/200)
+2020-01-10T15:47:12.6299695Z ##[debug]STDOUT/STDERR stream read finished.
+2020-01-10T15:47:12.6300181Z Receiving objects:   8% (16/200)
+2020-01-10T15:47:12.6300534Z ##[debug]Exited process 3061 with exit code 0
+2020-01-10T15:47:12.6300764Z Receiving objects:   9% (18/200)
+2020-01-10T15:47:12.6301212Z Receiving objects:  10% (20/200)
+2020-01-10T15:47:12.6301441Z Receiving objects:  11% (22/200)
+2020-01-10T15:47:12.6301627Z Receiving objects:  12% (24/200)
+2020-01-10T15:47:12.6302073Z Receiving objects:  13% (26/200)
+2020-01-10T15:47:12.6302254Z Receiving objects:  14% (28/200)
+2020-01-10T15:47:12.6302452Z Receiving objects:  15% (30/200)
+2020-01-10T15:47:12.6302610Z Receiving objects:  16% (32/200)
+2020-01-10T15:47:12.6302801Z Receiving objects:  17% (34/200)
+2020-01-10T15:47:12.6302953Z Receiving objects:  18% (36/200)
+2020-01-10T15:47:12.6303122Z Receiving objects:  19% (38/200)
+2020-01-10T15:47:12.6303273Z Receiving objects:  20% (40/200)
+2020-01-10T15:47:12.6303442Z Receiving objects:  21% (42/200)
+2020-01-10T15:47:12.6303634Z Receiving objects:  22% (44/200)
+2020-01-10T15:47:12.6303797Z Receiving objects:  23% (46/200)
+2020-01-10T15:47:12.6303963Z Receiving objects:  24% (48/200)
+2020-01-10T15:47:12.6304138Z Receiving objects:  25% (50/200)
+2020-01-10T15:47:12.6304338Z Receiving objects:  26% (52/200)
+2020-01-10T15:47:12.6304487Z Receiving objects:  27% (54/200)
+2020-01-10T15:47:12.6304656Z Receiving objects:  28% (56/200)
+2020-01-10T15:47:12.6305530Z Receiving objects:  29% (58/200)
+2020-01-10T15:47:12.6305733Z Receiving objects:  30% (60/200)
+2020-01-10T15:47:12.6305939Z Receiving objects:  31% (62/200)
+2020-01-10T15:47:12.6306234Z Receiving objects:  32% (64/200)
+2020-01-10T15:47:12.6306905Z Receiving objects:  33% (66/200)
+2020-01-10T15:47:12.6307088Z Receiving objects:  34% (68/200)
+2020-01-10T15:47:12.6307319Z Receiving objects:  35% (70/200)
+2020-01-10T15:47:12.6307470Z Receiving objects:  36% (72/200)
+2020-01-10T15:47:12.6307660Z Receiving objects:  37% (74/200)
+2020-01-10T15:47:12.6307804Z Receiving objects:  38% (76/200)
+2020-01-10T15:47:12.6309382Z remote: Total 200 (delta 0), reused 0 (delta 0), pack-reused 199        
+2020-01-10T15:47:12.6309623Z Receiving objects:  39% (78/200)
+2020-01-10T15:47:12.6309802Z Receiving objects:  40% (80/200)
+2020-01-10T15:47:12.6309965Z Receiving objects:  41% (82/200)
+2020-01-10T15:47:12.6310164Z Receiving objects:  42% (84/200)
+2020-01-10T15:47:12.6310311Z Receiving objects:  43% (86/200)
+2020-01-10T15:47:12.6310478Z Receiving objects:  44% (88/200)
+2020-01-10T15:47:12.6310709Z Receiving objects:  45% (90/200)
+2020-01-10T15:47:12.6310874Z Receiving objects:  46% (92/200)
+2020-01-10T15:47:12.6311214Z Receiving objects:  47% (94/200)
+2020-01-10T15:47:12.6311456Z Receiving objects:  48% (96/200)
+2020-01-10T15:47:12.6311607Z Receiving objects:  49% (98/200)
+2020-01-10T15:47:12.6311797Z Receiving objects:  50% (100/200)
+2020-01-10T15:47:12.6312019Z Receiving objects:  51% (102/200)
+2020-01-10T15:47:12.6312191Z Receiving objects:  52% (104/200)
+2020-01-10T15:47:12.6312337Z Receiving objects:  53% (106/200)
+2020-01-10T15:47:12.6312524Z Receiving objects:  54% (108/200)
+2020-01-10T15:47:12.6312670Z Receiving objects:  55% (110/200)
+2020-01-10T15:47:12.6312854Z Receiving objects:  56% (112/200)
+2020-01-10T15:47:12.6313014Z Receiving objects:  57% (114/200)
+2020-01-10T15:47:12.6313183Z Receiving objects:  58% (116/200)
+2020-01-10T15:47:12.6313329Z Receiving objects:  59% (118/200)
+2020-01-10T15:47:12.6313512Z Receiving objects:  60% (120/200)
+2020-01-10T15:47:12.6313656Z Receiving objects:  61% (122/200)
+2020-01-10T15:47:12.6313821Z Receiving objects:  62% (124/200)
+2020-01-10T15:47:12.6313967Z Receiving objects:  63% (126/200)
+2020-01-10T15:47:12.6314582Z Receiving objects:  64% (128/200)
+2020-01-10T15:47:12.6314787Z Receiving objects:  65% (130/200)
+2020-01-10T15:47:12.6314990Z Receiving objects:  66% (132/200)
+2020-01-10T15:47:12.6315139Z Receiving objects:  67% (134/200)
+2020-01-10T15:47:12.6315510Z Receiving objects:  68% (136/200)
+2020-01-10T15:47:12.6315709Z Receiving objects:  69% (138/200)
+2020-01-10T15:47:12.6315914Z Receiving objects:  70% (140/200)
+2020-01-10T15:47:12.6316061Z Receiving objects:  71% (142/200)
+2020-01-10T15:47:12.6316226Z Receiving objects:  72% (144/200)
+2020-01-10T15:47:12.6317004Z Receiving objects:  73% (146/200)
+2020-01-10T15:47:12.6317336Z Receiving objects:  74% (148/200)
+2020-01-10T15:47:12.6317540Z Receiving objects:  75% (150/200)
+2020-01-10T15:47:12.6317711Z Receiving objects:  76% (152/200)
+2020-01-10T15:47:12.6317857Z Receiving objects:  77% (154/200)
+2020-01-10T15:47:12.6318041Z Receiving objects:  78% (156/200)
+2020-01-10T15:47:12.6318193Z Receiving objects:  79% (158/200)
+2020-01-10T15:47:12.6318354Z Receiving objects:  80% (160/200)
+2020-01-10T15:47:12.6318548Z Receiving objects:  81% (162/200)
+2020-01-10T15:47:12.6318728Z Receiving objects:  82% (164/200)
+2020-01-10T15:47:12.6318878Z Receiving objects:  83% (166/200)
+2020-01-10T15:47:12.6319045Z Receiving objects:  84% (168/200)
+2020-01-10T15:47:12.6319711Z Receiving objects:  85% (170/200)
+2020-01-10T15:47:12.6319920Z Receiving objects:  86% (172/200)
+2020-01-10T15:47:12.6320091Z Receiving objects:  87% (174/200)
+2020-01-10T15:47:12.6320308Z Receiving objects:  88% (176/200)
+2020-01-10T15:47:12.6320455Z Receiving objects:  89% (178/200)
+2020-01-10T15:47:12.6320654Z Receiving objects:  90% (180/200)
+2020-01-10T15:47:12.6320811Z Receiving objects:  91% (182/200)
+2020-01-10T15:47:12.6320986Z Receiving objects:  92% (184/200)
+2020-01-10T15:47:12.6321141Z Receiving objects:  93% (186/200)
+2020-01-10T15:47:12.6321304Z Receiving objects:  94% (188/200)
+2020-01-10T15:47:12.6321451Z Receiving objects:  95% (190/200)
+2020-01-10T15:47:12.6321618Z Receiving objects:  96% (192/200)
+2020-01-10T15:47:12.6321824Z Receiving objects:  97% (194/200)
+2020-01-10T15:47:12.6322096Z Receiving objects:  98% (196/200)
+2020-01-10T15:47:12.6322263Z Receiving objects:  99% (198/200)
+2020-01-10T15:47:12.6322494Z Receiving objects: 100% (200/200)
+2020-01-10T15:47:12.6322651Z Receiving objects: 100% (200/200), 36.74 KiB | 432.00 KiB/s, done.
+2020-01-10T15:47:12.6323010Z Resolving deltas:   0% (0/93)
+2020-01-10T15:47:12.6323167Z Resolving deltas:   4% (4/93)
+2020-01-10T15:47:12.6323351Z Resolving deltas:   6% (6/93)
+2020-01-10T15:47:12.6323505Z Resolving deltas:  10% (10/93)
+2020-01-10T15:47:12.6323788Z Resolving deltas:  11% (11/93)
+2020-01-10T15:47:12.6323943Z Resolving deltas:  17% (16/93)
+2020-01-10T15:47:12.6324091Z Resolving deltas:  18% (17/93)
+2020-01-10T15:47:12.6324257Z Resolving deltas:  19% (18/93)
+2020-01-10T15:47:12.6324401Z Resolving deltas:  20% (19/93)
+2020-01-10T15:47:12.6324588Z Resolving deltas:  23% (22/93)
+2020-01-10T15:47:12.6324734Z Resolving deltas:  26% (25/93)
+2020-01-10T15:47:12.6324914Z Resolving deltas:  27% (26/93)
+2020-01-10T15:47:12.6325062Z Resolving deltas:  30% (28/93)
+2020-01-10T15:47:12.6325303Z Resolving deltas:  35% (33/93)
+2020-01-10T15:47:12.6325448Z Resolving deltas:  59% (55/93)
+2020-01-10T15:47:12.6325618Z Resolving deltas:  65% (61/93)
+2020-01-10T15:47:12.6325823Z Resolving deltas:  66% (62/93)
+2020-01-10T15:47:12.6326017Z Resolving deltas:  68% (64/93)
+2020-01-10T15:47:12.6326166Z Resolving deltas:  70% (66/93)
+2020-01-10T15:47:12.6326780Z Resolving deltas:  72% (67/93)
+2020-01-10T15:47:12.6327037Z Resolving deltas:  78% (73/93)
+2020-01-10T15:47:12.6327219Z Resolving deltas:  79% (74/93)
+2020-01-10T15:47:12.6327368Z Resolving deltas:  80% (75/93)
+2020-01-10T15:47:12.6327534Z Resolving deltas:  81% (76/93)
+2020-01-10T15:47:12.6327683Z Resolving deltas:  88% (82/93)
+2020-01-10T15:47:12.6327878Z Resolving deltas:  91% (85/93)
+2020-01-10T15:47:12.6328685Z Resolving deltas:  93% (87/93)
+2020-01-10T15:47:12.6329246Z Resolving deltas:  95% (89/93)
+2020-01-10T15:47:12.6329792Z Resolving deltas:  97% (91/93)
+2020-01-10T15:47:12.6329896Z Resolving deltas: 100% (93/93)
+2020-01-10T15:47:12.6329958Z Resolving deltas: 100% (93/93), done.
+2020-01-10T15:47:12.6330436Z From https://github.com/michaelhochleitner/python-sample-vscode-flask-tutorial
+2020-01-10T15:47:12.6330780Z  * [new branch]      dependabot/pip/werkzeug-0.15.3 -> origin/dependabot/pip/werkzeug-0.15.3
+2020-01-10T15:47:12.6331098Z  * [new branch]      master       -> origin/master
+2020-01-10T15:47:12.6331367Z  * [new branch]      startup-file -> origin/startup-file
+2020-01-10T15:47:12.6332159Z ##[debug]STDOUT/STDERR stream read finished.
+2020-01-10T15:47:12.6332374Z ##[debug]Finished process 3061 with exit code 0, and elapsed time 00:00:01.0172410.
+2020-01-10T15:47:12.7353810Z ##[debug]Processed: ##vso[telemetry.publish area=AzurePipelinesAgent;feature=GitFetch]{"ElapsedTimeMilliseconds":"1022","RefSpec":"","RemoteName":"origin","FetchDepth":"0","ExitCode":"0","Options":"--force --tags --prune --progress --no-recurse-submodules origin "}
+2020-01-10T15:47:12.7354773Z ##[debug]Processed: ##vso[task.setprogress value=80]Starting checkout...
+2020-01-10T15:47:12.7355013Z ##[debug]Checkout 580e07ba6a2abc189845f4083aaf9185b4773abf.
+2020-01-10T15:47:12.7355790Z ##[command]git checkout --progress --force 580e07ba6a2abc189845f4083aaf9185b4773abf
+2020-01-10T15:47:12.7355957Z ##[debug]Starting process:
+2020-01-10T15:47:12.7356273Z ##[debug]  File name: '/usr/bin/git'
+2020-01-10T15:47:12.7356555Z ##[debug]  Arguments: 'checkout --progress --force 580e07ba6a2abc189845f4083aaf9185b4773abf'
+2020-01-10T15:47:12.7357232Z ##[debug]  Working directory: '/home/vsts/work/1/s'
+2020-01-10T15:47:12.7357520Z ##[debug]  Require exit code zero: 'False'
+2020-01-10T15:47:12.7358271Z ##[debug]  Encoding web name:  ; code page: ''
+2020-01-10T15:47:12.7358537Z ##[debug]  Force kill process on cancellation: 'False'
+2020-01-10T15:47:12.7361291Z ##[debug]  Redirected STDIN: 'False'
+2020-01-10T15:47:12.7362422Z ##[debug]  Persist current code page: 'False'
+2020-01-10T15:47:12.7362724Z ##[debug]  Keep redirected STDIN open: 'False'
+2020-01-10T15:47:12.7362970Z ##[debug]  High priority process: 'False'
+2020-01-10T15:47:12.7363103Z ##[debug]Updated oom_score_adj to 500 for PID: 3079.
+2020-01-10T15:47:12.7363222Z ##[debug]Process started with process id 3079, waiting for process exit.
+2020-01-10T15:47:12.7363350Z ##[debug]STDOUT/STDERR stream read finished.
+2020-01-10T15:47:12.7363779Z ##[debug]STDOUT/STDERR stream read finished.
+2020-01-10T15:47:12.7364136Z Note: switching to '580e07ba6a2abc189845f4083aaf9185b4773abf'.
+2020-01-10T15:47:12.7364208Z 
+2020-01-10T15:47:12.7364496Z You are in 'detached HEAD' state. You can look around, make experimental
+2020-01-10T15:47:12.7364580Z changes and commit them, and you can discard any commits you make in this
+2020-01-10T15:47:12.7364675Z state without impacting any branches by switching back to a branch.
+2020-01-10T15:47:12.7364721Z 
+2020-01-10T15:47:12.7364802Z If you want to create a new branch to retain commits you create, you may
+2020-01-10T15:47:12.7365084Z do so (now or later) by using -c with the switch command. Example:
+2020-01-10T15:47:12.7365134Z 
+2020-01-10T15:47:12.7365392Z   git switch -c <new-branch-name>
+2020-01-10T15:47:12.7365434Z 
+2020-01-10T15:47:12.7365489Z Or undo this operation with:
+2020-01-10T15:47:12.7365598Z 
+2020-01-10T15:47:12.7365810Z   git switch -
+2020-01-10T15:47:12.7365858Z 
+2020-01-10T15:47:12.7367181Z Turn off this advice by setting config variable advice.detachedHead to false
+2020-01-10T15:47:12.7367247Z 
+2020-01-10T15:47:12.7367332Z HEAD is now at 580e07b Set up CI with Azure Pipelines
+2020-01-10T15:47:12.7367502Z ##[debug]Exited process 3079 with exit code 0
+2020-01-10T15:47:12.7367915Z ##[debug]Finished process 3079 with exit code 0, and elapsed time 00:00:00.0138166.
+2020-01-10T15:47:12.7391784Z ##[debug]Processed: ##vso[task.settaskvariable variable=repository;issecret=False;]self
+2020-01-10T15:47:12.7392139Z ##[debug]Processed: ##vso[task.settaskvariable variable=preferPath;issecret=False;]true
+2020-01-10T15:47:12.7393406Z ##[debug]Processed: ##vso[task.settaskvariable variable=repoUrlWithCred;issecret=True;]***
+2020-01-10T15:47:12.7454575Z ##[section]Finishing: Checkout
+2020-01-10T15:47:12.7474006Z ##[debug]Evaluating condition for step: 'Use Python 3.7'
+2020-01-10T15:47:12.7475272Z ##[debug]Evaluating: SucceededNode()
+2020-01-10T15:47:12.7475474Z ##[debug]Evaluating SucceededNode:
+2020-01-10T15:47:12.7475926Z ##[debug]=> True
+2020-01-10T15:47:12.7476207Z ##[debug]Result: True
+2020-01-10T15:47:12.7477037Z ##[section]Starting: Use Python 3.7
+2020-01-10T15:47:12.7480009Z ==============================================================================
+2020-01-10T15:47:12.7480109Z Task         : Use Python version
+2020-01-10T15:47:12.7480187Z Description  : Use the specified version of Python from the tool cache, optionally adding it to the PATH
+2020-01-10T15:47:12.7480286Z Version      : 0.151.2
+2020-01-10T15:47:12.7480346Z Author       : Microsoft Corporation
+2020-01-10T15:47:12.7480435Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/tool/use-python-version
+2020-01-10T15:47:12.7480548Z ==============================================================================
+2020-01-10T15:47:13.1868746Z ##[debug]agent.TempDirectory=/home/vsts/work/_temp
+2020-01-10T15:47:13.1908448Z ##[debug]loading inputs and endpoints
+2020-01-10T15:47:13.1915760Z ##[debug]loading INPUT_VERSIONSPEC
+2020-01-10T15:47:13.1929076Z ##[debug]loading INPUT_ADDTOPATH
+2020-01-10T15:47:13.1933918Z ##[debug]loading INPUT_ARCHITECTURE
+2020-01-10T15:47:13.1936131Z ##[debug]loading ENDPOINT_AUTH_SYSTEMVSSCONNECTION
+2020-01-10T15:47:13.1939392Z ##[debug]loading ENDPOINT_AUTH_SCHEME_SYSTEMVSSCONNECTION
+2020-01-10T15:47:13.1942276Z ##[debug]loading ENDPOINT_AUTH_PARAMETER_SYSTEMVSSCONNECTION_ACCESSTOKEN
+2020-01-10T15:47:13.1950311Z ##[debug]loading SECRET_SYSTEM_ACCESSTOKEN
+2020-01-10T15:47:13.1953517Z ##[debug]loaded 7
+2020-01-10T15:47:13.1971538Z ##[debug]Agent.ProxyUrl=undefined
+2020-01-10T15:47:13.1973278Z ##[debug]Agent.CAInfo=undefined
+2020-01-10T15:47:13.1973953Z ##[debug]Agent.ClientCert=undefined
+2020-01-10T15:47:13.1974910Z ##[debug]Agent.SkipCertValidation=undefined
+2020-01-10T15:47:13.2228049Z ##[debug]Agent.ProxyUrl=undefined
+2020-01-10T15:47:13.2228949Z ##[debug]Agent.CAInfo=undefined
+2020-01-10T15:47:13.2229735Z ##[debug]Agent.ClientCert=undefined
+2020-01-10T15:47:13.2237516Z ##[debug]check path : /home/vsts/work/_tasks/UsePythonVersion_33c63b11-352b-45a2-ba1b-54cb568a29ca/0.151.2/node_modules/azure-pipelines-tool-lib/lib.json
+2020-01-10T15:47:13.2240556Z ##[debug]adding resource file: /home/vsts/work/_tasks/UsePythonVersion_33c63b11-352b-45a2-ba1b-54cb568a29ca/0.151.2/node_modules/azure-pipelines-tool-lib/lib.json
+2020-01-10T15:47:13.2243343Z ##[debug]system.culture=en-US
+2020-01-10T15:47:13.2273873Z ##[debug]check path : /home/vsts/work/_tasks/UsePythonVersion_33c63b11-352b-45a2-ba1b-54cb568a29ca/0.151.2/task.json
+2020-01-10T15:47:13.2274350Z ##[debug]adding resource file: /home/vsts/work/_tasks/UsePythonVersion_33c63b11-352b-45a2-ba1b-54cb568a29ca/0.151.2/task.json
+2020-01-10T15:47:13.2274677Z ##[debug]system.culture=en-US
+2020-01-10T15:47:13.2291981Z ##[debug]versionSpec=3.7
+2020-01-10T15:47:13.2295611Z ##[debug]addToPath=true
+2020-01-10T15:47:13.2298424Z ##[debug]architecture=x64
+2020-01-10T15:47:13.2315615Z ##[debug]Semantic version spec of 3.7 is 3.7
+2020-01-10T15:47:13.2322274Z ##[debug]isExplicit: null
+2020-01-10T15:47:13.2322664Z ##[debug]explicit? false
+2020-01-10T15:47:13.2325040Z ##[debug]Agent.Version=2.163.1
+2020-01-10T15:47:13.2325392Z ##[debug]Agent.ToolsDirectory=/opt/hostedtoolcache
+2020-01-10T15:47:13.2338272Z ##[debug]isExplicit: 2.7.16
+2020-01-10T15:47:13.2338710Z ##[debug]explicit? true
+2020-01-10T15:47:13.2338976Z ##[debug]isExplicit: 3.5.7
+2020-01-10T15:47:13.2339262Z ##[debug]explicit? true
+2020-01-10T15:47:13.2340280Z ##[debug]isExplicit: 3.6.9
+2020-01-10T15:47:13.2340603Z ##[debug]explicit? true
+2020-01-10T15:47:13.2340890Z ##[debug]isExplicit: 3.7.5
+2020-01-10T15:47:13.2341103Z ##[debug]explicit? true
+2020-01-10T15:47:13.2341383Z ##[debug]isExplicit: 3.8.0
+2020-01-10T15:47:13.2341633Z ##[debug]explicit? true
+2020-01-10T15:47:13.2343843Z ##[debug]evaluating 5 versions
+2020-01-10T15:47:13.2397235Z ##[debug]matched: 3.7.5
+2020-01-10T15:47:13.2397689Z ##[debug]Agent.Version=2.163.1
+2020-01-10T15:47:13.2398001Z ##[debug]Agent.ToolsDirectory=/opt/hostedtoolcache
+2020-01-10T15:47:13.2398296Z ##[debug]checking cache: /opt/hostedtoolcache/Python/3.7.5/x64
+2020-01-10T15:47:13.2433863Z Found tool in cache: Python 3.7.5 x64
+2020-01-10T15:47:13.2437759Z ##[debug]set pythonLocation=/opt/hostedtoolcache/Python/3.7.5/x64
+2020-01-10T15:47:13.2467745Z ##[debug]Processed: ##vso[task.setvariable variable=pythonLocation;issecret=false;]/opt/hostedtoolcache/Python/3.7.5/x64
+2020-01-10T15:47:13.2469500Z ##[debug]Agent.Version=2.163.1
+2020-01-10T15:47:13.2469713Z Prepending PATH environment variable with directory: /opt/hostedtoolcache/Python/3.7.5/x64
+2020-01-10T15:47:13.2469928Z ##[debug]new Path: /opt/hostedtoolcache/Python/3.7.5/x64:/usr/share/rust/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+2020-01-10T15:47:13.2477857Z ##[debug]Processed: ##vso[task.prependpath]/opt/hostedtoolcache/Python/3.7.5/x64
+2020-01-10T15:47:13.2478622Z ##[debug]Agent.Version=2.163.1
+2020-01-10T15:47:13.2478768Z Prepending PATH environment variable with directory: /opt/hostedtoolcache/Python/3.7.5/x64/bin
+2020-01-10T15:47:13.2479014Z ##[debug]new Path: /opt/hostedtoolcache/Python/3.7.5/x64/bin:/opt/hostedtoolcache/Python/3.7.5/x64:/usr/share/rust/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+2020-01-10T15:47:13.2482049Z ##[debug]Processed: ##vso[task.prependpath]/opt/hostedtoolcache/Python/3.7.5/x64/bin
+2020-01-10T15:47:13.2482311Z ##[debug]task result: Succeeded
+2020-01-10T15:47:13.2500130Z ##[debug]Processed: ##vso[task.complete result=Succeeded;]
+2020-01-10T15:47:13.2521932Z ##[section]Finishing: Use Python 3.7
+2020-01-10T15:47:13.2530619Z ##[debug]Evaluating condition for step: 'Install dependencies'
+2020-01-10T15:47:13.2531357Z ##[debug]Evaluating: SucceededNode()
+2020-01-10T15:47:13.2531541Z ##[debug]Evaluating SucceededNode:
+2020-01-10T15:47:13.2531786Z ##[debug]=> True
+2020-01-10T15:47:13.2532032Z ##[debug]Result: True
+2020-01-10T15:47:13.2532253Z ##[section]Starting: Install dependencies
+2020-01-10T15:47:13.2535213Z ==============================================================================
+2020-01-10T15:47:13.2535293Z Task         : Command line
+2020-01-10T15:47:13.2535401Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2020-01-10T15:47:13.2535676Z Version      : 2.151.2
+2020-01-10T15:47:13.2535770Z Author       : Microsoft Corporation
+2020-01-10T15:47:13.2535838Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2020-01-10T15:47:13.2535964Z ==============================================================================
+2020-01-10T15:47:13.3922684Z ##[debug]agent.TempDirectory=/home/vsts/work/_temp
+2020-01-10T15:47:13.9823548Z ##[debug]loading inputs and endpoints
+2020-01-10T15:47:13.9823749Z ##[debug]loading INPUT_SCRIPT
+2020-01-10T15:47:13.9823934Z ##[debug]loading INPUT_WORKINGDIRECTORY
+2020-01-10T15:47:13.9824082Z ##[debug]loading INPUT_FAILONSTDERR
+2020-01-10T15:47:13.9824197Z ##[debug]loading ENDPOINT_AUTH_SYSTEMVSSCONNECTION
+2020-01-10T15:47:13.9824400Z ##[debug]loading ENDPOINT_AUTH_SCHEME_SYSTEMVSSCONNECTION
+2020-01-10T15:47:13.9824568Z ##[debug]loading ENDPOINT_AUTH_PARAMETER_SYSTEMVSSCONNECTION_ACCESSTOKEN
+2020-01-10T15:47:13.9824727Z ##[debug]loading SECRET_SYSTEM_ACCESSTOKEN
+2020-01-10T15:47:13.9824870Z ##[debug]loaded 7
+2020-01-10T15:47:13.9824973Z ##[debug]Agent.ProxyUrl=undefined
+2020-01-10T15:47:13.9825120Z ##[debug]Agent.CAInfo=undefined
+2020-01-10T15:47:13.9825264Z ##[debug]Agent.ClientCert=undefined
+2020-01-10T15:47:13.9825408Z ##[debug]Agent.SkipCertValidation=undefined
+2020-01-10T15:47:13.9830228Z ##[debug]check path : /home/vsts/work/_tasks/CmdLine_d9bafed4-0b18-4f58-968d-86655b4d2ce9/2.151.2/task.json
+2020-01-10T15:47:13.9830988Z ##[debug]adding resource file: /home/vsts/work/_tasks/CmdLine_d9bafed4-0b18-4f58-968d-86655b4d2ce9/2.151.2/task.json
+2020-01-10T15:47:13.9831512Z ##[debug]system.culture=en-US
+2020-01-10T15:47:13.9831671Z ##[debug]failOnStderr=false
+2020-01-10T15:47:13.9831968Z ##[debug]script=python -m pip install --upgrade pip
+pip install -r requirements.txt
+2020-01-10T15:47:13.9832111Z ##[debug]workingDirectory=/home/vsts/work/1/s
+2020-01-10T15:47:13.9832257Z ##[debug]check path : /home/vsts/work/1/s
+2020-01-10T15:47:13.9832359Z Generating script.
+2020-01-10T15:47:13.9832456Z ##[debug]Agent.Version=2.163.1
+2020-01-10T15:47:13.9832601Z ##[debug]agent.tempDirectory=/home/vsts/work/_temp
+2020-01-10T15:47:13.9832743Z ##[debug]check path : /home/vsts/work/_temp
+2020-01-10T15:47:13.9832817Z ========================== Starting Command Output ===========================
+2020-01-10T15:47:13.9833125Z ##[debug]which 'bash'
+2020-01-10T15:47:13.9833406Z ##[debug]found: '/bin/bash'
+2020-01-10T15:47:13.9833664Z ##[debug]which 'bash'
+2020-01-10T15:47:13.9833877Z ##[debug]found: '/bin/bash'
+2020-01-10T15:47:13.9834135Z ##[debug]which '/bin/bash'
+2020-01-10T15:47:13.9834392Z ##[debug]found: '/bin/bash'
+2020-01-10T15:47:13.9834649Z ##[debug]which '/bin/bash'
+2020-01-10T15:47:13.9834865Z ##[debug]found: '/bin/bash'
+2020-01-10T15:47:13.9835138Z ##[debug]/bin/bash arg: --noprofile
+2020-01-10T15:47:13.9835404Z ##[debug]/bin/bash arg: --norc
+2020-01-10T15:47:13.9835682Z ##[debug]/bin/bash arg: /home/vsts/work/_temp/2f00c821-4587-4215-b15a-31c37843c476.sh
+2020-01-10T15:47:13.9835805Z ##[debug]exec tool: /bin/bash
+2020-01-10T15:47:13.9835944Z ##[debug]arguments:
+2020-01-10T15:47:13.9836207Z ##[debug]   --noprofile
+2020-01-10T15:47:13.9837474Z ##[debug]   --norc
+2020-01-10T15:47:13.9837779Z ##[debug]   /home/vsts/work/_temp/2f00c821-4587-4215-b15a-31c37843c476.sh
+2020-01-10T15:47:13.9838524Z [command]/bin/bash --noprofile --norc /home/vsts/work/_temp/2f00c821-4587-4215-b15a-31c37843c476.sh
+2020-01-10T15:47:14.2291021Z Requirement already up-to-date: pip in /opt/hostedtoolcache/Python/3.7.5/x64/lib/python3.7/site-packages (19.3.1)
+2020-01-10T15:47:14.9665789Z Collecting click==6.7
+2020-01-10T15:47:15.0492094Z   Downloading https://files.pythonhosted.org/packages/34/c1/8806f99713ddb993c5366c362b2f908f18269f8d792aff1abfd700775a77/click-6.7-py2.py3-none-any.whl (71kB)
+2020-01-10T15:47:15.1319246Z Collecting Flask==1.0.2
+2020-01-10T15:47:15.1471517Z   Downloading https://files.pythonhosted.org/packages/7f/e7/08578774ed4536d3242b14dacb4696386634607af824ea997202cd0edb4b/Flask-1.0.2-py2.py3-none-any.whl (91kB)
+2020-01-10T15:47:15.2232807Z Collecting itsdangerous==0.24
+2020-01-10T15:47:15.2384026Z   Downloading https://files.pythonhosted.org/packages/dc/b4/a60bcdba945c00f6d608d8975131ab3f25b22f2bcfe1dab221165194b2d4/itsdangerous-0.24.tar.gz (46kB)
+2020-01-10T15:47:15.7737988Z Collecting Jinja2==2.10
+2020-01-10T15:47:15.7898905Z   Downloading https://files.pythonhosted.org/packages/7f/ff/ae64bacdfc95f27a016a7bed8e8686763ba4d277a78ca76f32659220a731/Jinja2-2.10-py2.py3-none-any.whl (126kB)
+2020-01-10T15:47:15.8819109Z Collecting MarkupSafe==1.0
+2020-01-10T15:47:15.8995848Z   Downloading https://files.pythonhosted.org/packages/4d/de/32d741db316d8fdb7680822dd37001ef7a448255de9699ab4bfcbdf4172b/MarkupSafe-1.0.tar.gz
+2020-01-10T15:47:16.2262882Z Collecting Werkzeug==0.14.1
+2020-01-10T15:47:16.2421113Z   Downloading https://files.pythonhosted.org/packages/20/c4/12e3e56473e52375aa29c4764e70d1b8f3efa6682bef8d0aae04fe335243/Werkzeug-0.14.1-py2.py3-none-any.whl (322kB)
+2020-01-10T15:47:16.3491638Z Installing collected packages: click, Werkzeug, MarkupSafe, Jinja2, itsdangerous, Flask
+2020-01-10T15:47:16.5413105Z     Running setup.py install for MarkupSafe: started
+2020-01-10T15:47:17.3812915Z     Running setup.py install for MarkupSafe: finished with status 'done'
+2020-01-10T15:47:17.4799900Z     Running setup.py install for itsdangerous: started
+2020-01-10T15:47:17.7529379Z     Running setup.py install for itsdangerous: finished with status 'done'
+2020-01-10T15:47:17.8113885Z Successfully installed Flask-1.0.2 Jinja2-2.10 MarkupSafe-1.0 Werkzeug-0.14.1 click-6.7 itsdangerous-0.24
+2020-01-10T15:47:17.8783162Z ##[debug]Exit code 0 received from tool '/bin/bash'
+2020-01-10T15:47:17.8790115Z ##[debug]STDIO streams have closed for tool '/bin/bash'
+2020-01-10T15:47:17.8809373Z ##[debug]task result: Succeeded
+2020-01-10T15:47:17.8838113Z ##[debug]Processed: ##vso[task.complete result=Succeeded;done=true;]
+2020-01-10T15:47:17.8839110Z ##[section]Finishing: Install dependencies
+2020-01-10T15:47:17.8848536Z ##[debug]Evaluating condition for step: 'pytest'
+2020-01-10T15:47:17.8849073Z ##[debug]Evaluating: SucceededNode()
+2020-01-10T15:47:17.8849253Z ##[debug]Evaluating SucceededNode:
+2020-01-10T15:47:17.8849516Z ##[debug]=> True
+2020-01-10T15:47:17.8850156Z ##[debug]Result: True
+2020-01-10T15:47:17.8850399Z ##[section]Starting: pytest
+2020-01-10T15:47:17.8853186Z ==============================================================================
+2020-01-10T15:47:17.8853266Z Task         : Command line
+2020-01-10T15:47:17.8854207Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2020-01-10T15:47:17.8854290Z Version      : 2.151.2
+2020-01-10T15:47:17.8854403Z Author       : Microsoft Corporation
+2020-01-10T15:47:17.8854476Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2020-01-10T15:47:17.8854609Z ==============================================================================
+2020-01-10T15:47:18.0124144Z ##[debug]agent.TempDirectory=/home/vsts/work/_temp
+2020-01-10T15:47:18.0149369Z ##[debug]loading inputs and endpoints
+2020-01-10T15:47:18.0153501Z ##[debug]loading INPUT_SCRIPT
+2020-01-10T15:47:18.0165081Z ##[debug]loading INPUT_WORKINGDIRECTORY
+2020-01-10T15:47:18.0165995Z ##[debug]loading INPUT_FAILONSTDERR
+2020-01-10T15:47:18.0166165Z ##[debug]loading ENDPOINT_AUTH_SYSTEMVSSCONNECTION
+2020-01-10T15:47:18.0169927Z ##[debug]loading ENDPOINT_AUTH_SCHEME_SYSTEMVSSCONNECTION
+2020-01-10T15:47:18.0172745Z ##[debug]loading ENDPOINT_AUTH_PARAMETER_SYSTEMVSSCONNECTION_ACCESSTOKEN
+2020-01-10T15:47:18.0178529Z ##[debug]loading SECRET_SYSTEM_ACCESSTOKEN
+2020-01-10T15:47:18.0182951Z ##[debug]loaded 7
+2020-01-10T15:47:18.0204054Z ##[debug]Agent.ProxyUrl=undefined
+2020-01-10T15:47:18.0204384Z ##[debug]Agent.CAInfo=undefined
+2020-01-10T15:47:18.0204903Z ##[debug]Agent.ClientCert=undefined
+2020-01-10T15:47:18.0205047Z ##[debug]Agent.SkipCertValidation=undefined
+2020-01-10T15:47:18.0219276Z ##[debug]check path : /home/vsts/work/_tasks/CmdLine_d9bafed4-0b18-4f58-968d-86655b4d2ce9/2.151.2/task.json
+2020-01-10T15:47:18.0219718Z ##[debug]adding resource file: /home/vsts/work/_tasks/CmdLine_d9bafed4-0b18-4f58-968d-86655b4d2ce9/2.151.2/task.json
+2020-01-10T15:47:18.0220046Z ##[debug]system.culture=en-US
+2020-01-10T15:47:18.0241455Z ##[debug]failOnStderr=false
+2020-01-10T15:47:18.0244036Z ##[debug]script=pip install pytest pytest-azurepipelines
 pytest
-2020-01-10T14:03:10.5058641Z ##[debug]workingDirectory=/home/vsts/work/1/s
-2020-01-10T14:03:10.5058736Z ##[debug]check path : /home/vsts/work/1/s
-2020-01-10T14:03:10.5089321Z Generating script.
-2020-01-10T14:03:10.5089563Z ##[debug]Agent.Version=2.163.1
-2020-01-10T14:03:10.5091793Z ##[debug]agent.tempDirectory=/home/vsts/work/_temp
-2020-01-10T14:03:10.5091900Z ##[debug]check path : /home/vsts/work/_temp
-2020-01-10T14:03:10.5106747Z ========================== Starting Command Output ===========================
-2020-01-10T14:03:10.5109236Z ##[debug]which 'bash'
-2020-01-10T14:03:10.5117981Z ##[debug]found: '/bin/bash'
-2020-01-10T14:03:10.5118338Z ##[debug]which 'bash'
-2020-01-10T14:03:10.5120032Z ##[debug]found: '/bin/bash'
-2020-01-10T14:03:10.5120381Z ##[debug]which '/bin/bash'
-2020-01-10T14:03:10.5120575Z ##[debug]found: '/bin/bash'
-2020-01-10T14:03:10.5120905Z ##[debug]which '/bin/bash'
-2020-01-10T14:03:10.5121079Z ##[debug]found: '/bin/bash'
-2020-01-10T14:03:10.5124342Z ##[debug]/bin/bash arg: --noprofile
-2020-01-10T14:03:10.5124823Z ##[debug]/bin/bash arg: --norc
-2020-01-10T14:03:10.5124969Z ##[debug]/bin/bash arg: /home/vsts/work/_temp/08865055-1c78-4119-ba03-6afaffe76e8c.sh
-2020-01-10T14:03:10.5130314Z ##[debug]exec tool: /bin/bash
-2020-01-10T14:03:10.5130401Z ##[debug]arguments:
-2020-01-10T14:03:10.5130906Z ##[debug]   --noprofile
-2020-01-10T14:03:10.5131060Z ##[debug]   --norc
-2020-01-10T14:03:10.5131426Z ##[debug]   /home/vsts/work/_temp/08865055-1c78-4119-ba03-6afaffe76e8c.sh
-2020-01-10T14:03:10.5135610Z [command]/bin/bash --noprofile --norc /home/vsts/work/_temp/08865055-1c78-4119-ba03-6afaffe76e8c.sh
-2020-01-10T14:03:11.0686223Z Collecting pytest
-2020-01-10T14:03:11.1243436Z   Downloading https://files.pythonhosted.org/packages/19/cf/711f1d887cb92c5155c9a1eb338f1b5d2411b50e4492a3b20e4a188a22b2/pytest-5.3.2-py3-none-any.whl (234kB)
-2020-01-10T14:03:11.2509709Z Collecting pytest-azurepipelines
-2020-01-10T14:03:11.2659845Z   Downloading https://files.pythonhosted.org/packages/33/6c/ed9e46adb9c76296351d27fda52d5664b883cda8a281292657a9a7345d88/pytest_azurepipelines-0.8.0-py3-none-any.whl
-2020-01-10T14:03:11.3180723Z Collecting packaging
-2020-01-10T14:03:11.3328321Z   Downloading https://files.pythonhosted.org/packages/d8/5b/3098db49a61ccc8583ffead6aedc226f08ff56dc03106b6ec54451e27a30/packaging-20.0-py2.py3-none-any.whl
-2020-01-10T14:03:11.3745405Z Collecting wcwidth
-2020-01-10T14:03:11.3889012Z   Downloading https://files.pythonhosted.org/packages/58/b4/4850a0ccc6f567cc0ebe7060d20ffd4258b8210efadc259da62dc6ed9c65/wcwidth-0.1.8-py2.py3-none-any.whl
-2020-01-10T14:03:11.4315535Z Collecting attrs>=17.4.0
-2020-01-10T14:03:11.4460595Z   Downloading https://files.pythonhosted.org/packages/a2/db/4313ab3be961f7a763066401fb77f7748373b6094076ae2bda2806988af6/attrs-19.3.0-py2.py3-none-any.whl
-2020-01-10T14:03:11.5357875Z Collecting py>=1.5.0
-2020-01-10T14:03:11.5500152Z   Downloading https://files.pythonhosted.org/packages/99/8d/21e1767c009211a62a8e3067280bfce76e89c9f876180308515942304d2d/py-1.8.1-py2.py3-none-any.whl (83kB)
-2020-01-10T14:03:11.6263920Z Collecting importlib-metadata>=0.12; python_version < "3.8"
-2020-01-10T14:03:11.6408529Z   Downloading https://files.pythonhosted.org/packages/e9/71/1a1e0ed0981bb6a67bce55a210f168126b7ebd2065958673797ea66489ca/importlib_metadata-1.3.0-py2.py3-none-any.whl
-2020-01-10T14:03:11.6999237Z Collecting pluggy<1.0,>=0.12
-2020-01-10T14:03:11.7148144Z   Downloading https://files.pythonhosted.org/packages/a0/28/85c7aa31b80d150b772fbe4a229487bc6644da9ccb7e427dd8cc60cb8a62/pluggy-0.13.1-py2.py3-none-any.whl
-2020-01-10T14:03:11.7700413Z Collecting more-itertools>=4.0.0
-2020-01-10T14:03:11.7842676Z   Downloading https://files.pythonhosted.org/packages/68/03/0604cec1ea13c9f063dd50f900d1a36160334dd3cfb01fd0e638f61b46ba/more_itertools-8.0.2-py3-none-any.whl (40kB)
-2020-01-10T14:03:11.8787007Z Collecting pyparsing>=2.0.2
-2020-01-10T14:03:11.8937883Z   Downloading https://files.pythonhosted.org/packages/5d/bc/1e58593167fade7b544bfe9502a26dc860940a79ab306e651e7f13be68c2/pyparsing-2.4.6-py2.py3-none-any.whl (67kB)
-2020-01-10T14:03:11.9419518Z Collecting six
-2020-01-10T14:03:11.9563942Z   Downloading https://files.pythonhosted.org/packages/65/26/32b8464df2a97e6dd1b656ed26b2c194606c16fe163c695a992b36c11cdf/six-1.13.0-py2.py3-none-any.whl
-2020-01-10T14:03:11.9964548Z Collecting zipp>=0.5
-2020-01-10T14:03:12.0099373Z   Downloading https://files.pythonhosted.org/packages/74/3d/1ee25a26411ba0401b43c6376d2316a71addcc72ef8690b101b4ea56d76a/zipp-0.6.0-py2.py3-none-any.whl
-2020-01-10T14:03:12.1136284Z Installing collected packages: pyparsing, six, packaging, wcwidth, attrs, py, more-itertools, zipp, importlib-metadata, pluggy, pytest, pytest-azurepipelines
-2020-01-10T14:03:12.4883020Z Successfully installed attrs-19.3.0 importlib-metadata-1.3.0 more-itertools-8.0.2 packaging-20.0 pluggy-0.13.1 py-1.8.1 pyparsing-2.4.6 pytest-5.3.2 pytest-azurepipelines-0.8.0 six-1.13.0 wcwidth-0.1.8 zipp-0.6.0
-2020-01-10T14:03:12.9941521Z ##[warning]The 'junit_family' default value will change to 'xunit2' in pytest 6.0.
-2020-01-10T14:03:12.9950151Z ##[debug]Processed: ##vso[task.logissue type=warning;]The 'junit_family' default value will change to 'xunit2' in pytest 6.0.
-2020-01-10T14:03:12.9951095Z Add 'junit_family=legacy' to your pytest.ini file to silence this warning and make your suite compatible.
-2020-01-10T14:03:12.9951209Z ============================= test session starts ==============================
-2020-01-10T14:03:12.9951421Z platform linux -- Python 3.7.5, pytest-5.3.2, py-1.8.1, pluggy-0.13.1
-2020-01-10T14:03:12.9951453Z rootdir: /home/vsts/work/1/s
-2020-01-10T14:03:12.9951635Z plugins: azurepipelines-0.8.0
-2020-01-10T14:03:12.9996730Z collected 0 items
-2020-01-10T14:03:14.4091073Z ##[debug]Object of TestLogStore created.
-2020-01-10T14:03:14.6049924Z ##[debug]Object of TestResultsPublisher created.
-2020-01-10T14:03:14.6051530Z ##[debug]Object of TestLogStore created.
-2020-01-10T14:03:14.6052418Z ##[debug]Object of TestRunPublisher created.
-2020-01-10T14:03:14.6053293Z ##[debug]Object of TestLogStore created.
-2020-01-10T14:03:14.6117591Z ##[debug]Object of JUnitResultParser created.
-2020-01-10T14:03:14.6132693Z ##[debug]Entering ParseTestResultFiles
-2020-01-10T14:03:14.6137575Z ##[debug]runContext.ReleaseURI is null
-2020-01-10T14:03:14.6138059Z ##[debug]runContext.ReleaseEnvironmentUri is null
-2020-01-10T14:03:14.6175190Z ##[debug]Reading test results from file '/home/vsts/work/1/s/test-output.xml'.
-2020-01-10T14:03:14.6266172Z ##[debug]Total test results: 0.
-2020-01-10T14:03:14.6318527Z No Result Found to Publish '/home/vsts/work/1/s/test-output.xml'.
-2020-01-10T14:03:14.6323162Z ##[debug]Leaving ParseTestResultFiles
-2020-01-10T14:03:14.6376617Z ##[debug]runContext.ReleaseURI is null
-2020-01-10T14:03:14.6381220Z ##[debug]runContext.ReleaseEnvironmentUri is null
-2020-01-10T14:03:14.6397086Z ##[debug]Uploading build level attachements individually
-2020-01-10T14:03:14.6422051Z ##[debug]Processed: ##vso[results.publish type=JUnit;runTitle='Pytest results';]/home/vsts/work/1/s/test-output.xml
-2020-01-10T14:03:14.6422189Z Skipping uploading of coverage data.
-2020-01-10T14:03:14.6422241Z 
-2020-01-10T14:03:14.6422271Z =============================== warnings summary ===============================
-2020-01-10T14:03:14.6422748Z /opt/hostedtoolcache/Python/3.7.5/x64/lib/python3.7/site-packages/_pytest/junitxml.py:436
-2020-01-10T14:03:14.6423056Z   /opt/hostedtoolcache/Python/3.7.5/x64/lib/python3.7/site-packages/_pytest/junitxml.py:436: PytestDeprecationWarning: The 'junit_family' default value will change to 'xunit2' in pytest 6.0.
-2020-01-10T14:03:14.6423264Z   Add 'junit_family=legacy' to your pytest.ini file to silence this warning and make your suite compatible.
-2020-01-10T14:03:14.6423317Z     _issue_warning_captured(deprecated.JUNIT_XML_DEFAULT_FAMILY, config.hook, 2)
-2020-01-10T14:03:14.6423508Z 
-2020-01-10T14:03:14.6423705Z -- Docs: https://docs.pytest.org/en/latest/warnings.html
-2020-01-10T14:03:14.6423883Z ----------- generated xml file: /home/vsts/work/1/s/test-output.xml ------------
-2020-01-10T14:03:14.6423915Z ============================== 1 warning in 0.04s ==============================
-2020-01-10T14:03:14.6424302Z ##[debug]Exit code 5 received from tool '/bin/bash'
-2020-01-10T14:03:14.6424523Z ##[debug]STDIO streams have closed for tool '/bin/bash'
-2020-01-10T14:03:14.6424846Z ##[error]Bash exited with code '5'.
-2020-01-10T14:03:14.6425050Z ##[debug]Processed: ##vso[task.issue type=error;]Bash exited with code '5'.
-2020-01-10T14:03:14.6425122Z ##[debug]task result: Failed
-2020-01-10T14:03:14.6426332Z ##[debug]Processed: ##vso[task.complete result=Failed;done=true;]
-2020-01-10T14:03:14.6494357Z ##[section]Async Command Start: Publish test results
-2020-01-10T14:03:14.6517584Z ##[debug]Entering PublishAllTestResultsToSingleTestRunAsync
-2020-01-10T14:03:14.6645086Z ##[debug]Leaving PublishAllTestResultsToSingleTestRunAsync
-2020-01-10T14:03:14.7333106Z ##[debug]Total build level attachments: 0.
-2020-01-10T14:03:14.7665137Z ##[section]Async Command End: Publish test results
-2020-01-10T14:03:14.7666070Z ##[section]Finishing: pytest
+2020-01-10T15:47:18.0245925Z ##[debug]workingDirectory=/home/vsts/work/1/s
+2020-01-10T15:47:18.0246100Z ##[debug]check path : /home/vsts/work/1/s
+2020-01-10T15:47:18.0281588Z Generating script.
+2020-01-10T15:47:18.0283988Z ##[debug]Agent.Version=2.163.1
+2020-01-10T15:47:18.0284156Z ##[debug]agent.tempDirectory=/home/vsts/work/_temp
+2020-01-10T15:47:18.0284264Z ##[debug]check path : /home/vsts/work/_temp
+2020-01-10T15:47:18.0303772Z ========================== Starting Command Output ===========================
+2020-01-10T15:47:18.0306398Z ##[debug]which 'bash'
+2020-01-10T15:47:18.0316259Z ##[debug]found: '/bin/bash'
+2020-01-10T15:47:18.0319592Z ##[debug]which 'bash'
+2020-01-10T15:47:18.0319965Z ##[debug]found: '/bin/bash'
+2020-01-10T15:47:18.0320294Z ##[debug]which '/bin/bash'
+2020-01-10T15:47:18.0320566Z ##[debug]found: '/bin/bash'
+2020-01-10T15:47:18.0321003Z ##[debug]which '/bin/bash'
+2020-01-10T15:47:18.0321307Z ##[debug]found: '/bin/bash'
+2020-01-10T15:47:18.0324143Z ##[debug]/bin/bash arg: --noprofile
+2020-01-10T15:47:18.0324441Z ##[debug]/bin/bash arg: --norc
+2020-01-10T15:47:18.0324682Z ##[debug]/bin/bash arg: /home/vsts/work/_temp/17490db7-8bcb-47ae-bc30-ea2705c37234.sh
+2020-01-10T15:47:18.0331240Z ##[debug]exec tool: /bin/bash
+2020-01-10T15:47:18.0331405Z ##[debug]arguments:
+2020-01-10T15:47:18.0331760Z ##[debug]   --noprofile
+2020-01-10T15:47:18.0331975Z ##[debug]   --norc
+2020-01-10T15:47:18.0332264Z ##[debug]   /home/vsts/work/_temp/17490db7-8bcb-47ae-bc30-ea2705c37234.sh
+2020-01-10T15:47:18.0336357Z [command]/bin/bash --noprofile --norc /home/vsts/work/_temp/17490db7-8bcb-47ae-bc30-ea2705c37234.sh
+2020-01-10T15:47:18.6734645Z Collecting pytest
+2020-01-10T15:47:18.7301802Z   Downloading https://files.pythonhosted.org/packages/19/cf/711f1d887cb92c5155c9a1eb338f1b5d2411b50e4492a3b20e4a188a22b2/pytest-5.3.2-py3-none-any.whl (234kB)
+2020-01-10T15:47:18.8609607Z Collecting pytest-azurepipelines
+2020-01-10T15:47:18.8761825Z   Downloading https://files.pythonhosted.org/packages/33/6c/ed9e46adb9c76296351d27fda52d5664b883cda8a281292657a9a7345d88/pytest_azurepipelines-0.8.0-py3-none-any.whl
+2020-01-10T15:47:18.9329624Z Collecting packaging
+2020-01-10T15:47:18.9488946Z   Downloading https://files.pythonhosted.org/packages/d8/5b/3098db49a61ccc8583ffead6aedc226f08ff56dc03106b6ec54451e27a30/packaging-20.0-py2.py3-none-any.whl
+2020-01-10T15:47:19.0000015Z Collecting wcwidth
+2020-01-10T15:47:19.0158906Z   Downloading https://files.pythonhosted.org/packages/58/b4/4850a0ccc6f567cc0ebe7060d20ffd4258b8210efadc259da62dc6ed9c65/wcwidth-0.1.8-py2.py3-none-any.whl
+2020-01-10T15:47:19.0702643Z Collecting more-itertools>=4.0.0
+2020-01-10T15:47:19.0858384Z   Downloading https://files.pythonhosted.org/packages/68/03/0604cec1ea13c9f063dd50f900d1a36160334dd3cfb01fd0e638f61b46ba/more_itertools-8.0.2-py3-none-any.whl (40kB)
+2020-01-10T15:47:19.1649416Z Collecting py>=1.5.0
+2020-01-10T15:47:19.1824385Z   Downloading https://files.pythonhosted.org/packages/99/8d/21e1767c009211a62a8e3067280bfce76e89c9f876180308515942304d2d/py-1.8.1-py2.py3-none-any.whl (83kB)
+2020-01-10T15:47:19.2660324Z Collecting importlib-metadata>=0.12; python_version < "3.8"
+2020-01-10T15:47:19.2812668Z   Downloading https://files.pythonhosted.org/packages/e9/71/1a1e0ed0981bb6a67bce55a210f168126b7ebd2065958673797ea66489ca/importlib_metadata-1.3.0-py2.py3-none-any.whl
+2020-01-10T15:47:19.3448868Z Collecting attrs>=17.4.0
+2020-01-10T15:47:19.3601463Z   Downloading https://files.pythonhosted.org/packages/a2/db/4313ab3be961f7a763066401fb77f7748373b6094076ae2bda2806988af6/attrs-19.3.0-py2.py3-none-any.whl
+2020-01-10T15:47:19.4443910Z Collecting pluggy<1.0,>=0.12
+2020-01-10T15:47:19.4604759Z   Downloading https://files.pythonhosted.org/packages/a0/28/85c7aa31b80d150b772fbe4a229487bc6644da9ccb7e427dd8cc60cb8a62/pluggy-0.13.1-py2.py3-none-any.whl
+2020-01-10T15:47:19.5682120Z Collecting pyparsing>=2.0.2
+2020-01-10T15:47:19.5838827Z   Downloading https://files.pythonhosted.org/packages/5d/bc/1e58593167fade7b544bfe9502a26dc860940a79ab306e651e7f13be68c2/pyparsing-2.4.6-py2.py3-none-any.whl (67kB)
+2020-01-10T15:47:19.6440095Z Collecting six
+2020-01-10T15:47:19.6596361Z   Downloading https://files.pythonhosted.org/packages/65/26/32b8464df2a97e6dd1b656ed26b2c194606c16fe163c695a992b36c11cdf/six-1.13.0-py2.py3-none-any.whl
+2020-01-10T15:47:19.7061229Z Collecting zipp>=0.5
+2020-01-10T15:47:19.7209409Z   Downloading https://files.pythonhosted.org/packages/74/3d/1ee25a26411ba0401b43c6376d2316a71addcc72ef8690b101b4ea56d76a/zipp-0.6.0-py2.py3-none-any.whl
+2020-01-10T15:47:19.8462023Z Installing collected packages: pyparsing, six, packaging, wcwidth, more-itertools, py, zipp, importlib-metadata, attrs, pluggy, pytest, pytest-azurepipelines
+2020-01-10T15:47:20.3045971Z Successfully installed attrs-19.3.0 importlib-metadata-1.3.0 more-itertools-8.0.2 packaging-20.0 pluggy-0.13.1 py-1.8.1 pyparsing-2.4.6 pytest-5.3.2 pytest-azurepipelines-0.8.0 six-1.13.0 wcwidth-0.1.8 zipp-0.6.0
+2020-01-10T15:47:20.6679194Z ##[warning]The 'junit_family' default value will change to 'xunit2' in pytest 6.0.
+2020-01-10T15:47:20.6689051Z ##[debug]Processed: ##vso[task.logissue type=warning;]The 'junit_family' default value will change to 'xunit2' in pytest 6.0.
+2020-01-10T15:47:20.6692978Z Add 'junit_family=legacy' to your pytest.ini file to silence this warning and make your suite compatible.
+2020-01-10T15:47:20.6693096Z ============================= test session starts ==============================
+2020-01-10T15:47:20.6693471Z platform linux -- Python 3.7.5, pytest-5.3.2, py-1.8.1, pluggy-0.13.1
+2020-01-10T15:47:20.6693542Z rootdir: /home/vsts/work/1/s
+2020-01-10T15:47:20.6694023Z plugins: azurepipelines-0.8.0
+2020-01-10T15:47:20.6785202Z collected 0 items
+2020-01-10T15:47:21.5791342Z ##[debug]Object of TestLogStore created.
+2020-01-10T15:47:21.6773321Z ##[debug]Object of TestResultsPublisher created.
+2020-01-10T15:47:21.6775071Z ##[debug]Object of TestLogStore created.
+2020-01-10T15:47:21.6776381Z ##[debug]Object of TestRunPublisher created.
+2020-01-10T15:47:21.6777499Z ##[debug]Object of TestLogStore created.
+2020-01-10T15:47:21.6853297Z ##[debug]Object of JUnitResultParser created.
+2020-01-10T15:47:21.6870360Z ##[debug]Entering ParseTestResultFiles
+2020-01-10T15:47:21.6877182Z ##[debug]runContext.ReleaseURI is null
+2020-01-10T15:47:21.6877754Z ##[debug]runContext.ReleaseEnvironmentUri is null
+2020-01-10T15:47:21.6924520Z ##[debug]Reading test results from file '/home/vsts/work/1/s/test-output.xml'.
+2020-01-10T15:47:21.7034113Z ##[debug]Total test results: 0.
+2020-01-10T15:47:21.7105852Z No Result Found to Publish '/home/vsts/work/1/s/test-output.xml'.
+2020-01-10T15:47:21.7111559Z ##[debug]Leaving ParseTestResultFiles
+2020-01-10T15:47:21.7162827Z ##[debug]runContext.ReleaseURI is null
+2020-01-10T15:47:21.7163376Z ##[debug]runContext.ReleaseEnvironmentUri is null
+2020-01-10T15:47:21.7213333Z ##[debug]Processed: ##vso[results.publish type=JUnit;runTitle='Pytest results';]/home/vsts/work/1/s/test-output.xml
+2020-01-10T15:47:21.7213777Z Skipping uploading of coverage data.
+2020-01-10T15:47:21.7213821Z 
+2020-01-10T15:47:21.7213905Z =============================== warnings summary ===============================
+2020-01-10T15:47:21.7214578Z /opt/hostedtoolcache/Python/3.7.5/x64/lib/python3.7/site-packages/_pytest/junitxml.py:436
+2020-01-10T15:47:21.7215016Z   /opt/hostedtoolcache/Python/3.7.5/x64/lib/python3.7/site-packages/_pytest/junitxml.py:436: PytestDeprecationWarning: The 'junit_family' default value will change to 'xunit2' in pytest 6.0.
+2020-01-10T15:47:21.7215802Z   Add 'junit_family=legacy' to your pytest.ini file to silence this warning and make your suite compatible.
+2020-01-10T15:47:21.7215929Z     _issue_warning_captured(deprecated.JUNIT_XML_DEFAULT_FAMILY, config.hook, 2)
+2020-01-10T15:47:21.7215977Z 
+2020-01-10T15:47:21.7216245Z -- Docs: https://docs.pytest.org/en/latest/warnings.html
+2020-01-10T15:47:21.7216522Z ----------- generated xml file: /home/vsts/work/1/s/test-output.xml ------------
+2020-01-10T15:47:21.7216619Z ============================== 1 warning in 0.02s ==============================
+2020-01-10T15:47:21.7217259Z ##[debug]Exit code 5 received from tool '/bin/bash'
+2020-01-10T15:47:21.7217551Z ##[debug]STDIO streams have closed for tool '/bin/bash'
+2020-01-10T15:47:21.7218047Z ##[error]Bash exited with code '5'.
+2020-01-10T15:47:21.7218999Z ##[debug]Processed: ##vso[task.issue type=error;]Bash exited with code '5'.
+2020-01-10T15:47:21.7219171Z ##[debug]task result: Failed
+2020-01-10T15:47:21.7219961Z ##[debug]Processed: ##vso[task.complete result=Failed;done=true;]
+2020-01-10T15:47:21.7299285Z ##[debug]Uploading build level attachements individually
+2020-01-10T15:47:21.7303625Z ##[section]Async Command Start: Publish test results
+2020-01-10T15:47:21.7333608Z ##[debug]Entering PublishAllTestResultsToSingleTestRunAsync
+2020-01-10T15:47:21.7484369Z ##[debug]Leaving PublishAllTestResultsToSingleTestRunAsync
+2020-01-10T15:47:21.8600294Z ##[debug]Total build level attachments: 0.
+2020-01-10T15:47:21.8935024Z ##[section]Async Command End: Publish test results
+2020-01-10T15:47:21.8935856Z ##[section]Finishing: pytest
+2020-01-10T15:47:21.8943412Z ##[debug]Evaluating condition for step: 'Checkout'
+2020-01-10T15:47:21.8944200Z ##[debug]Evaluating: AlwaysNode()
+2020-01-10T15:47:21.8944346Z ##[debug]Evaluating AlwaysNode:
+2020-01-10T15:47:21.8945394Z ##[debug]=> True
+2020-01-10T15:47:21.8945724Z ##[debug]Result: True
+2020-01-10T15:47:21.8945935Z ##[section]Starting: Checkout
+2020-01-10T15:47:21.8947693Z ==============================================================================
+2020-01-10T15:47:21.8947772Z Task         : Get sources
+2020-01-10T15:47:21.8948067Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2020-01-10T15:47:21.8948441Z Version      : 1.0.0
+2020-01-10T15:47:21.8948519Z Author       : Microsoft
+2020-01-10T15:47:21.8948589Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2020-01-10T15:47:21.8948682Z ==============================================================================
+2020-01-10T15:47:22.3689308Z Cleaning any cached credential from repository: michaelhochleitner/python-sample-vscode-flask-tutorial (GitHub)
+2020-01-10T15:47:22.3696464Z ##[debug]Repository url=https://github.com/michaelhochleitner/python-sample-vscode-flask-tutorial
+2020-01-10T15:47:22.3696657Z ##[debug]targetPath=/home/vsts/work/1/s
+2020-01-10T15:47:22.3732941Z ##[section]Finishing: Checkout
+2020-01-10T15:47:22.3803854Z ##[section]Starting: Finalize Job
+2020-01-10T15:47:22.3850870Z Start cleaning up orphan processes.
+2020-01-10T15:47:22.3940233Z ##[section]Finishing: Finalize Job
+2020-01-10T15:47:22.4022511Z ##[debug]Starting diagnostic file upload.
+2020-01-10T15:47:22.4023064Z ##[debug]Setting up diagnostic log folders.
+2020-01-10T15:47:22.4024661Z ##[debug]Creating diagnostic log files folder.
+2020-01-10T15:47:22.4025111Z ##[debug]Creating diagnostic log environment file.
+2020-01-10T15:47:22.4113460Z ##[debug]Creating capabilities file.
+2020-01-10T15:47:22.4152918Z ##[debug]Copying 1 worker diag logs.
+2020-01-10T15:47:22.4173416Z ##[debug]Copying 1 agent diag logs.
+2020-01-10T15:47:22.4174498Z ##[debug]Zipping diagnostic files.
+2020-01-10T15:47:22.4210008Z ##[debug]Uploading diagnostic metadata file.
+2020-01-10T15:47:22.4263050Z ##[debug]Diagnostic file upload complete.
+2020-01-10T15:47:22.4324008Z ##[section]Finishing: Job Python37
 
