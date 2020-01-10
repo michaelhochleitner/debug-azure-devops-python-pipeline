@@ -1,0 +1,132 @@
+2020-01-10T14:03:10.3853540Z ##[debug]Evaluating condition for step: 'pytest'
+2020-01-10T14:03:10.3854004Z ##[debug]Evaluating: SucceededNode()
+2020-01-10T14:03:10.3854081Z ##[debug]Evaluating SucceededNode:
+2020-01-10T14:03:10.3854246Z ##[debug]=> True
+2020-01-10T14:03:10.3854376Z ##[debug]Result: True
+2020-01-10T14:03:10.3854523Z ##[section]Starting: pytest
+2020-01-10T14:03:10.3856558Z ==============================================================================
+2020-01-10T14:03:10.3856601Z Task         : Command line
+2020-01-10T14:03:10.3856627Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2020-01-10T14:03:10.3856685Z Version      : 2.151.2
+2020-01-10T14:03:10.3856712Z Author       : Microsoft Corporation
+2020-01-10T14:03:10.3856739Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2020-01-10T14:03:10.3856764Z ==============================================================================
+2020-01-10T14:03:10.4958392Z ##[debug]agent.TempDirectory=/home/vsts/work/_temp
+2020-01-10T14:03:10.4986249Z ##[debug]loading inputs and endpoints
+2020-01-10T14:03:10.4990001Z ##[debug]loading INPUT_SCRIPT
+2020-01-10T14:03:10.4999326Z ##[debug]loading INPUT_WORKINGDIRECTORY
+2020-01-10T14:03:10.5000242Z ##[debug]loading INPUT_FAILONSTDERR
+2020-01-10T14:03:10.5000401Z ##[debug]loading ENDPOINT_AUTH_SYSTEMVSSCONNECTION
+2020-01-10T14:03:10.5002437Z ##[debug]loading ENDPOINT_AUTH_SCHEME_SYSTEMVSSCONNECTION
+2020-01-10T14:03:10.5004576Z ##[debug]loading ENDPOINT_AUTH_PARAMETER_SYSTEMVSSCONNECTION_ACCESSTOKEN
+2020-01-10T14:03:10.5009636Z ##[debug]loading SECRET_SYSTEM_ACCESSTOKEN
+2020-01-10T14:03:10.5011154Z ##[debug]loaded 7
+2020-01-10T14:03:10.5023991Z ##[debug]Agent.ProxyUrl=undefined
+2020-01-10T14:03:10.5024146Z ##[debug]Agent.CAInfo=undefined
+2020-01-10T14:03:10.5024208Z ##[debug]Agent.ClientCert=undefined
+2020-01-10T14:03:10.5024298Z ##[debug]Agent.SkipCertValidation=undefined
+2020-01-10T14:03:10.5036633Z ##[debug]check path : /home/vsts/work/_tasks/CmdLine_d9bafed4-0b18-4f58-968d-86655b4d2ce9/2.151.2/task.json
+2020-01-10T14:03:10.5036922Z ##[debug]adding resource file: /home/vsts/work/_tasks/CmdLine_d9bafed4-0b18-4f58-968d-86655b4d2ce9/2.151.2/task.json
+2020-01-10T14:03:10.5037612Z ##[debug]system.culture=en-US
+2020-01-10T14:03:10.5053500Z ##[debug]failOnStderr=false
+2020-01-10T14:03:10.5056293Z ##[debug]script=pip install pytest pytest-azurepipelines
+pytest
+2020-01-10T14:03:10.5058641Z ##[debug]workingDirectory=/home/vsts/work/1/s
+2020-01-10T14:03:10.5058736Z ##[debug]check path : /home/vsts/work/1/s
+2020-01-10T14:03:10.5089321Z Generating script.
+2020-01-10T14:03:10.5089563Z ##[debug]Agent.Version=2.163.1
+2020-01-10T14:03:10.5091793Z ##[debug]agent.tempDirectory=/home/vsts/work/_temp
+2020-01-10T14:03:10.5091900Z ##[debug]check path : /home/vsts/work/_temp
+2020-01-10T14:03:10.5106747Z ========================== Starting Command Output ===========================
+2020-01-10T14:03:10.5109236Z ##[debug]which 'bash'
+2020-01-10T14:03:10.5117981Z ##[debug]found: '/bin/bash'
+2020-01-10T14:03:10.5118338Z ##[debug]which 'bash'
+2020-01-10T14:03:10.5120032Z ##[debug]found: '/bin/bash'
+2020-01-10T14:03:10.5120381Z ##[debug]which '/bin/bash'
+2020-01-10T14:03:10.5120575Z ##[debug]found: '/bin/bash'
+2020-01-10T14:03:10.5120905Z ##[debug]which '/bin/bash'
+2020-01-10T14:03:10.5121079Z ##[debug]found: '/bin/bash'
+2020-01-10T14:03:10.5124342Z ##[debug]/bin/bash arg: --noprofile
+2020-01-10T14:03:10.5124823Z ##[debug]/bin/bash arg: --norc
+2020-01-10T14:03:10.5124969Z ##[debug]/bin/bash arg: /home/vsts/work/_temp/08865055-1c78-4119-ba03-6afaffe76e8c.sh
+2020-01-10T14:03:10.5130314Z ##[debug]exec tool: /bin/bash
+2020-01-10T14:03:10.5130401Z ##[debug]arguments:
+2020-01-10T14:03:10.5130906Z ##[debug]   --noprofile
+2020-01-10T14:03:10.5131060Z ##[debug]   --norc
+2020-01-10T14:03:10.5131426Z ##[debug]   /home/vsts/work/_temp/08865055-1c78-4119-ba03-6afaffe76e8c.sh
+2020-01-10T14:03:10.5135610Z [command]/bin/bash --noprofile --norc /home/vsts/work/_temp/08865055-1c78-4119-ba03-6afaffe76e8c.sh
+2020-01-10T14:03:11.0686223Z Collecting pytest
+2020-01-10T14:03:11.1243436Z   Downloading https://files.pythonhosted.org/packages/19/cf/711f1d887cb92c5155c9a1eb338f1b5d2411b50e4492a3b20e4a188a22b2/pytest-5.3.2-py3-none-any.whl (234kB)
+2020-01-10T14:03:11.2509709Z Collecting pytest-azurepipelines
+2020-01-10T14:03:11.2659845Z   Downloading https://files.pythonhosted.org/packages/33/6c/ed9e46adb9c76296351d27fda52d5664b883cda8a281292657a9a7345d88/pytest_azurepipelines-0.8.0-py3-none-any.whl
+2020-01-10T14:03:11.3180723Z Collecting packaging
+2020-01-10T14:03:11.3328321Z   Downloading https://files.pythonhosted.org/packages/d8/5b/3098db49a61ccc8583ffead6aedc226f08ff56dc03106b6ec54451e27a30/packaging-20.0-py2.py3-none-any.whl
+2020-01-10T14:03:11.3745405Z Collecting wcwidth
+2020-01-10T14:03:11.3889012Z   Downloading https://files.pythonhosted.org/packages/58/b4/4850a0ccc6f567cc0ebe7060d20ffd4258b8210efadc259da62dc6ed9c65/wcwidth-0.1.8-py2.py3-none-any.whl
+2020-01-10T14:03:11.4315535Z Collecting attrs>=17.4.0
+2020-01-10T14:03:11.4460595Z   Downloading https://files.pythonhosted.org/packages/a2/db/4313ab3be961f7a763066401fb77f7748373b6094076ae2bda2806988af6/attrs-19.3.0-py2.py3-none-any.whl
+2020-01-10T14:03:11.5357875Z Collecting py>=1.5.0
+2020-01-10T14:03:11.5500152Z   Downloading https://files.pythonhosted.org/packages/99/8d/21e1767c009211a62a8e3067280bfce76e89c9f876180308515942304d2d/py-1.8.1-py2.py3-none-any.whl (83kB)
+2020-01-10T14:03:11.6263920Z Collecting importlib-metadata>=0.12; python_version < "3.8"
+2020-01-10T14:03:11.6408529Z   Downloading https://files.pythonhosted.org/packages/e9/71/1a1e0ed0981bb6a67bce55a210f168126b7ebd2065958673797ea66489ca/importlib_metadata-1.3.0-py2.py3-none-any.whl
+2020-01-10T14:03:11.6999237Z Collecting pluggy<1.0,>=0.12
+2020-01-10T14:03:11.7148144Z   Downloading https://files.pythonhosted.org/packages/a0/28/85c7aa31b80d150b772fbe4a229487bc6644da9ccb7e427dd8cc60cb8a62/pluggy-0.13.1-py2.py3-none-any.whl
+2020-01-10T14:03:11.7700413Z Collecting more-itertools>=4.0.0
+2020-01-10T14:03:11.7842676Z   Downloading https://files.pythonhosted.org/packages/68/03/0604cec1ea13c9f063dd50f900d1a36160334dd3cfb01fd0e638f61b46ba/more_itertools-8.0.2-py3-none-any.whl (40kB)
+2020-01-10T14:03:11.8787007Z Collecting pyparsing>=2.0.2
+2020-01-10T14:03:11.8937883Z   Downloading https://files.pythonhosted.org/packages/5d/bc/1e58593167fade7b544bfe9502a26dc860940a79ab306e651e7f13be68c2/pyparsing-2.4.6-py2.py3-none-any.whl (67kB)
+2020-01-10T14:03:11.9419518Z Collecting six
+2020-01-10T14:03:11.9563942Z   Downloading https://files.pythonhosted.org/packages/65/26/32b8464df2a97e6dd1b656ed26b2c194606c16fe163c695a992b36c11cdf/six-1.13.0-py2.py3-none-any.whl
+2020-01-10T14:03:11.9964548Z Collecting zipp>=0.5
+2020-01-10T14:03:12.0099373Z   Downloading https://files.pythonhosted.org/packages/74/3d/1ee25a26411ba0401b43c6376d2316a71addcc72ef8690b101b4ea56d76a/zipp-0.6.0-py2.py3-none-any.whl
+2020-01-10T14:03:12.1136284Z Installing collected packages: pyparsing, six, packaging, wcwidth, attrs, py, more-itertools, zipp, importlib-metadata, pluggy, pytest, pytest-azurepipelines
+2020-01-10T14:03:12.4883020Z Successfully installed attrs-19.3.0 importlib-metadata-1.3.0 more-itertools-8.0.2 packaging-20.0 pluggy-0.13.1 py-1.8.1 pyparsing-2.4.6 pytest-5.3.2 pytest-azurepipelines-0.8.0 six-1.13.0 wcwidth-0.1.8 zipp-0.6.0
+2020-01-10T14:03:12.9941521Z ##[warning]The 'junit_family' default value will change to 'xunit2' in pytest 6.0.
+2020-01-10T14:03:12.9950151Z ##[debug]Processed: ##vso[task.logissue type=warning;]The 'junit_family' default value will change to 'xunit2' in pytest 6.0.
+2020-01-10T14:03:12.9951095Z Add 'junit_family=legacy' to your pytest.ini file to silence this warning and make your suite compatible.
+2020-01-10T14:03:12.9951209Z ============================= test session starts ==============================
+2020-01-10T14:03:12.9951421Z platform linux -- Python 3.7.5, pytest-5.3.2, py-1.8.1, pluggy-0.13.1
+2020-01-10T14:03:12.9951453Z rootdir: /home/vsts/work/1/s
+2020-01-10T14:03:12.9951635Z plugins: azurepipelines-0.8.0
+2020-01-10T14:03:12.9996730Z collected 0 items
+2020-01-10T14:03:14.4091073Z ##[debug]Object of TestLogStore created.
+2020-01-10T14:03:14.6049924Z ##[debug]Object of TestResultsPublisher created.
+2020-01-10T14:03:14.6051530Z ##[debug]Object of TestLogStore created.
+2020-01-10T14:03:14.6052418Z ##[debug]Object of TestRunPublisher created.
+2020-01-10T14:03:14.6053293Z ##[debug]Object of TestLogStore created.
+2020-01-10T14:03:14.6117591Z ##[debug]Object of JUnitResultParser created.
+2020-01-10T14:03:14.6132693Z ##[debug]Entering ParseTestResultFiles
+2020-01-10T14:03:14.6137575Z ##[debug]runContext.ReleaseURI is null
+2020-01-10T14:03:14.6138059Z ##[debug]runContext.ReleaseEnvironmentUri is null
+2020-01-10T14:03:14.6175190Z ##[debug]Reading test results from file '/home/vsts/work/1/s/test-output.xml'.
+2020-01-10T14:03:14.6266172Z ##[debug]Total test results: 0.
+2020-01-10T14:03:14.6318527Z No Result Found to Publish '/home/vsts/work/1/s/test-output.xml'.
+2020-01-10T14:03:14.6323162Z ##[debug]Leaving ParseTestResultFiles
+2020-01-10T14:03:14.6376617Z ##[debug]runContext.ReleaseURI is null
+2020-01-10T14:03:14.6381220Z ##[debug]runContext.ReleaseEnvironmentUri is null
+2020-01-10T14:03:14.6397086Z ##[debug]Uploading build level attachements individually
+2020-01-10T14:03:14.6422051Z ##[debug]Processed: ##vso[results.publish type=JUnit;runTitle='Pytest results';]/home/vsts/work/1/s/test-output.xml
+2020-01-10T14:03:14.6422189Z Skipping uploading of coverage data.
+2020-01-10T14:03:14.6422241Z 
+2020-01-10T14:03:14.6422271Z =============================== warnings summary ===============================
+2020-01-10T14:03:14.6422748Z /opt/hostedtoolcache/Python/3.7.5/x64/lib/python3.7/site-packages/_pytest/junitxml.py:436
+2020-01-10T14:03:14.6423056Z   /opt/hostedtoolcache/Python/3.7.5/x64/lib/python3.7/site-packages/_pytest/junitxml.py:436: PytestDeprecationWarning: The 'junit_family' default value will change to 'xunit2' in pytest 6.0.
+2020-01-10T14:03:14.6423264Z   Add 'junit_family=legacy' to your pytest.ini file to silence this warning and make your suite compatible.
+2020-01-10T14:03:14.6423317Z     _issue_warning_captured(deprecated.JUNIT_XML_DEFAULT_FAMILY, config.hook, 2)
+2020-01-10T14:03:14.6423508Z 
+2020-01-10T14:03:14.6423705Z -- Docs: https://docs.pytest.org/en/latest/warnings.html
+2020-01-10T14:03:14.6423883Z ----------- generated xml file: /home/vsts/work/1/s/test-output.xml ------------
+2020-01-10T14:03:14.6423915Z ============================== 1 warning in 0.04s ==============================
+2020-01-10T14:03:14.6424302Z ##[debug]Exit code 5 received from tool '/bin/bash'
+2020-01-10T14:03:14.6424523Z ##[debug]STDIO streams have closed for tool '/bin/bash'
+2020-01-10T14:03:14.6424846Z ##[error]Bash exited with code '5'.
+2020-01-10T14:03:14.6425050Z ##[debug]Processed: ##vso[task.issue type=error;]Bash exited with code '5'.
+2020-01-10T14:03:14.6425122Z ##[debug]task result: Failed
+2020-01-10T14:03:14.6426332Z ##[debug]Processed: ##vso[task.complete result=Failed;done=true;]
+2020-01-10T14:03:14.6494357Z ##[section]Async Command Start: Publish test results
+2020-01-10T14:03:14.6517584Z ##[debug]Entering PublishAllTestResultsToSingleTestRunAsync
+2020-01-10T14:03:14.6645086Z ##[debug]Leaving PublishAllTestResultsToSingleTestRunAsync
+2020-01-10T14:03:14.7333106Z ##[debug]Total build level attachments: 0.
+2020-01-10T14:03:14.7665137Z ##[section]Async Command End: Publish test results
+2020-01-10T14:03:14.7666070Z ##[section]Finishing: pytest
+
